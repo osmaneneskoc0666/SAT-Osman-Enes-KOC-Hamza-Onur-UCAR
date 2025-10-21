@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tek Sayfada Menü, Resim ve Form</title>
+    
+    <!-- Font Awesome (İkonlar için) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* =================================================== */
+        /* CSS KODLARI BAŞLANGICI */
+        /* =================================================== */
+        
+        /* Genel Stil Ayarları */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6; /* Açık gri arka plan */
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+         h2{
+            text-align: center;
+         }
+        /* 1. ÜST MENÜ STİLLERİ */
+        .ust-menu-alani {
+            background-color: #ff9800; /* Turuncu zemin */
+            color: white;
+            padding: 15px 5%; /* Kenarlardan boşluk */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            margin-left: 5px;
+            border: 1px solid transparent;
+            transition: all 0.3s;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .menu a i {
+            margin-right: 5px;
+        }
+
+        .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: white;
+        }
+        
+        /* 2. ORTALANMIŞ RESİM ve HİZALI METİN ALANI STİLLERİ */
+        main {
+            padding: 40px 20px;
+            display: block; /* Ana içeriği blok olarak ayarla */
+        }
+        
+        .content-area {
+            width: 90%; 
+            max-width: 1000px; 
+            margin: 0 auto 40px auto; /* Sayfayı ortala ve alttan boşluk bırak */
+            padding: 20px;
+            background-color: white; 
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        .image-wrapper {
+            padding: 20px 0;
+            text-align: center; /* Resmi yatayda ortalar */
+        }
+
+        .image-wrapper img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Resmi ortalamayı pekiştirir */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-content {
+            padding-top: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            /* Bu alan zaten .content-area'nın bir çocuğu olduğu için
+               .content-area'nın sol kenarından boşluklu (hizalı) görünecektir. */
+        }
+
+        .text-content p {
+            margin-bottom: 20px;
+            text-align: justify; /* Metni iki yana yaslar */
+        }
+
+        /* 3. BİLGİ FORMU STİLLERİ */
+        .form-container-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .form-container {
+            background-color: #ffffff; 
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+            width: 100%;
+            max-width: 500px; 
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #ff9800;
+            display: inline-block;
+            padding-bottom: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #ff9800; 
+            outline: none;
+            box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #ff9800; 
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #e68900; 
+        }
+
+        /* Küçük ekranlar (Duyarlı Tasarım) */
+        @media (max-width: 768px) {
+            .ust-menu-alani {
+                flex-direction: column; 
+                padding: 15px 20px;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            .menu {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .menu a {
+                margin: 5px;
+                padding: 8px 10px;
+            }
+            
+            .content-area {
+                width: 100%;
+                padding: 15px;
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+
+       
+    </style>
+</head>
+<body>
+
+    <header class="ust-menu-alani">
+        <div class="logo"><img src="logo.png" alt="logo goruntülenmiyor" style="width: 100px;"></div>
+        <nav class="menu">
+            <a href="https://www.obilet.com/otobus-bileti/adana" ><i class="fas fa-map-marked-alt"></i> Otobüs </a>
+            <a href="https://www.trivago.com.tr/tr/lm/otel-adana-t%C3%BCrkiye?search=200-15236"><i class="fas fa-bed"></i> Konaklama</a>
+            <a href="https://www.obilet.com/ucak-bileti/adana"><i class="fas fa-plane"></i> Transfer</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        
+        <div class="content-area">
+            <h2>Adana</h2>
+            
+            <div class="image-wrapper"> 
+                <img src="afyon.jpg" style="width: 450px;">
+            </div>
+            
+            <div class="text-content">
+                <p>
+                    Bu metin, resmin hemen altına yerleştirilmiştir. **content-area**'nın içindeki bu yazılar, kapsayıcının kenarlarına göre hizalıdır. Sayfa ortalanmış olsa bile, yazılarınız sol taraftan düzenli bir boşlukla başlar ve metinler iki yana yaslanmıştır.
+                </p>
+                <p>
+                    **İpuçları:** Resminizin URL'sini yukarıdaki `<img>` etiketindeki `src` alanına yapıştırmayı unutmayın. Sayfanın düzenini korumak için resminiz geniş (örneğin 800px) ve yüksek (örneğin 450px) olmalıdır.
+                </p>
+            </div>
+        </div>
+        
+        
+    
+    </main>
+
+</body>
+</html>
