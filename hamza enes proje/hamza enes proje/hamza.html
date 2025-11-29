@@ -3,47 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Şehir Arama Uygulaması</title>
+  <title>Şehir Tanıtma Uygulaması</title>
   <style>
 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      height: 100vh;
-      /* Arka plan görseli ve örtüsü (overlay) */
-      background:
-        linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
-        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center;
-      background-size: cover;
-      background-attachment: fixed;
-
+      min-height: 100vh; 
+      padding-top: 60px; 
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      align-items: center; 
+      background-color: #f7f7f7; /* Beyaza yakın açık gri */ 
     }
       /*---------------------------------- üst menünün ayarları---------------------- */
-    .menu {
-      margin-left: auto; /* Ana Sayfa sağa yaslama */
-    }
-
     .navbar { /* üst menünün ayarları */
-      background-color:#FFA000;
+      background-color:#228B22;
       overflow: hidden;
-      display: flex;
-      justify-content: center;
+      display: flex; /* Flexbox etkinleştirildi */
+      justify-content: space-between; /* Öğeleri iki yana yaslar */
       align-items: center;
       padding: 10px 40px;
       position: fixed;
       top: 0;
       width: 100%;
+      box-sizing: border-box; 
       z-index: 10;
     }
 
     .navbar a {
       color: white;
       text-decoration: none;
-      padding: 14px 40px;
+      padding: 14px 20px; 
       display: block;
       font-weight: bold;
       transition: background 0.3s;
@@ -51,7 +42,7 @@
 
     .navbar a:hover {
       background-color: #fff;
-      color: #FFA000;
+      color: #228B22;
       border-radius: 5px;
     }
 
@@ -60,51 +51,106 @@
       font-weight: bold;
       color: white;
       letter-spacing: 1px;
-      margin-left: 35px;
+    }
+    
+    .logo img {
+        width: 100px;
+        display: block;
+    }
+    
+    .main-menu { /* Yeni menü konteyneri */
+      display: flex;
+      justify-content: center; 
+      flex-grow: 1; /* Ortayı kaplaması için */
+    }
+    
+    .auth-buttons { /* Yeni sağ taraf konteyneri */
+        display: flex;
+        align-items: center;
+        gap: 20px; /* Butonlar arasına boşluk */
+    }
+
+    .login-button {
+      background-color: white;
+      color: #228B22;
+      border: 2px solid white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .login-button:hover {
+      background-color: #228B22;
+      color: white;
+      border: 2px solid white;
     }
         /*-------------------- üst menünün ayarları bitiş------------------- */
+    
+    /* Yeni ana başlık stili */
+    .main-heading {
+        font-size: 36px;
+        color: #333;
+        font-weight: bold;
+        margin-top: 20px; 
+        margin-bottom: 30px; /* Arama çubuğundan ayırmak için */
+    }
+
+    /*-------------------- arama çubuğu ve butonunun yeni konumu------------------- */
+    .search-flex-wrapper {
+        display: flex;
+        align-items: center; 
+        margin-top: 0; /* H1'den sonraki boşluğa göre ayarlandı */
+        position: relative; 
+        z-index: 2;
+    }
+
         /*--------------------  arama butonu ayarları------------------- */
     .orta-buton {
-      background-color: #FFA000;
+      background-color: #228B22;
       color: white;
       border: none;
       padding: 15px 35px;
       font-size: 18px;
       border-radius: 50px; /* Köşeler ovalleşti */
       cursor: pointer;
-      position: absolute;
-      top: 53.4%;
-      left: 62%;
-      transform: translate(-50%, -50%);
+      position: static; 
+      margin-top: 0; /* Konumu search-flex-wrapper ile ayarlanacak */     
+      margin-left: 20px; /* Arama kutusu ile arasına boşluk */
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       transition: 0.3s;
-      z-index: 1; /* Arama kutusunun üzerinde kalması için */
+      z-index: 1; 
+      top: initial;
+      left: initial;
+      transform: none;
     }
 
     .orta-buton:hover {
       background-color: white;
-      color: #FFA000;
-      border: 2px solid #FFA000;
+      color: #228B22;
+      border: 2px solid #228B22;
     }
         /*-------------------- arama butonu ayarları bitiş------------------- */
+        
     /*-------------------------- arama çubuğu ve öneri listesi---------------------------------- */
 
     .search-container {
       display: flex;
       justify-content: center;
-      margin-top: 50px;
-      margin-right: 200px;
-      position: relative; /* Öneri listesini konumlandırmak için */
+      margin-top: 0; /* H1 ve search-flex-wrapper ile ayarlandı */ 
+      margin-right: 0; 
+      position: relative; 
     }
 
     .search-box {
       display: flex;
-      border: 3px solid #FFA000;
+      border: 3px solid #228B22;
       border-radius: 25px;
       overflow: hidden;
       width: 400px;
-      position: relative; /* Input alanı ve butonu hizalamak için */
-      z-index: 2; /* Öneri listesinin arkasında kalmaması için */
+      position: relative; 
+      z-index: 2; 
     }
 
     .search-box input {
@@ -115,10 +161,6 @@
       outline: none;
     }
 
-    .search-box button {
-      /* Bu buton, Keşfet butonu ile aynı işlevi göreceği için buradaki görünümü gizleyelim veya kaldıralım */
-      display: none; /* Arama kutusunun içindeki butonu gizledim */
-    }
 
     /* Otomatik tamamlama öneri listesi */
     #autocomplete-list {
@@ -127,16 +169,14 @@
       border-bottom: none;
       border-top: none;
       z-index: 99;
-      /* Liste pozisyonu arama kutusunun hemen altında başlar */
-      top: 100%; /* Arama kutusunun hemen altına */
+      top: 100%; 
       left: 0;
       right: 0;
-      width: 400px; /* Arama kutusu ile aynı genişlik */
+      width: 400px; 
       margin-left: auto;
       margin-right: auto;
       background-color: white;
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    
       overflow: hidden;
     }
 
@@ -146,7 +186,7 @@
       background-color: #fff;
       border-bottom: 1px solid #d4d4d4;
       font-size: 16px;
-    }
+      }
 
     #autocomplete-list div:last-child {
       border-bottom: none;
@@ -155,36 +195,512 @@
     /* Öğe üzerine gelindiğinde/seçildiğinde stil */
     #autocomplete-list div:hover,
     .autocomplete-active {
-      background-color: #FFA000 !important; 
+      background-color: #228B22 !important; 
       color: #000000;
       font-weight: bold;
     }
 
   /*-------------------------- arama çubuğu ve öneri listesi bitiş ---------------------------------- */
+  
+  /*-------------------------- SÜREKLİ DEĞİŞEN RESİM STİLİ ---------------------------------- */
+    .slideshow-container {
+      position: relative; 
+      margin-top: 50px; 
+      width: 100%; 
+      max-width: 800px; 
+      height: 400px; 
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+      z-index: 0; 
+    }
+
+    #slideshow-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      transition: opacity 1s ease-in-out; 
+      opacity: 1; 
+    }
+  /*-------------------------- SÜREKLİ DEĞİŞEN RESİM STİLİ BİTİŞ ---------------------------------- */
+  
+  /* ====================== YENİ VİDEO OYNATICI STİLLERİ (En Alt İçin) ====================== */
+  
+    .video-player-section {
+        width: 100%;
+        max-width: 900px; 
+        margin-top: 50px;
+        margin-bottom: 50px; /* Footer'dan önce boşluk */
+        z-index: 0; 
+    }
+    
+    /* Ana Kapsayıcı: Yüksekliği 650px olarak sabitler */
+    .video-container {
+        position: relative;
+        height: 508px; /* İstenilen yükseklik */
+        width: 100%; 
+        overflow: hidden;
+        background-color: #000; /* Boşluklar için siyah zemin */
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+
+    /* Tüm video öğeleri için temel stil */
+    .video-container video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        /* En boy oranını koruyarak alana sığdırır. Tam ekran (sağlu sollu) görünümü sağlar. */
+        object-fit: contain; 
+        transform: translate(-50%, -50%); /* Merkezleme */
+        opacity: 0; /* Başlangıçta hepsi gizli */
+        transition: opacity 1s ease-in-out; /* Yumuşak geçiş efekti (1 saniye dissolve) */
+    }
+
+    /* Yalnızca ilk videonun görünür olması için (Başlangıçta) */
+    .video-container video:first-child {
+        opacity: 1;
+    }
+  /* ====================== YENİ VİDEO OYNATICI STİLLERİ BİTİŞ ====================== */
+
+  /* ====================== YENİ DİNAMİK BANNER STİLLERİ ====================== */
+  
+  .dynamic-banner-wrapper {
+    margin-top: 50px; 
+    width: 100%;
+    max-width: 800px; /* Bölümün maksimum genişliği */
+    height: 550px; /* Banner yüksekliğini artırdık */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    cursor: pointer;
+}
+
+.banner-inner { /* Kayma animasyonunu taşıyacak blok */
+    display: flex;
+    width: 200%; /* İçeriği iki katına çıkar */
+    height: 100%;
+    transition: transform 0.6s ease-in-out; /* Kayma süresi */
+}
+
+/* Fareyle üzerine gelindiğinde sola kaydır */
+.dynamic-banner-wrapper:hover .banner-inner {
+    transform: translateX(-50%); 
+}
+
+.banner-image-block { /* Resmin bulunduğu sol kısım */
+    flex: 0 0 50%; /* İç bloğun yarısı */
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner-image-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Resim sola kayarken, resmin kendisi hafifçe sağa kayar (bütünlük için) */
+.dynamic-banner-wrapper:hover .banner-image-block img {
+    transform: translateX(10%); 
+}
+
+.banner-text-block { /* Metnin bulunduğu sağ kısım */
+    flex: 0 0 50%; /* İç bloğun diğer yarısı */
+    width: 50%;
+    height: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #228B22; /* Yeşil arka plan */
+    color: white;
+    text-align: left;
+}
+
+.banner-text-block h4 {
+    font-size: 32px; /* Başlık boyutunu biraz artırdık */
+    margin-top: 0;
+    margin-bottom: 20px; /* Alt boşluğu artırdık */
+    color: #ffc107; /* Vurgu rengi */
+}
+
+.banner-text-block p {
+    font-size: 18px; /* Metin boyutunu artırdık */
+    line-height: 1.7; /* Satır aralığını artırdık */
+    margin-bottom: 15px;
+}
+  /* ====================== YENİ DİNAMİK BANNER STİLLERİ BİTİŞ ====================== */
+  
+  /* ====================== GEZİLECEK YERLER BÖLÜMÜ STİLLERİ ====================== */
+    .travel-section {
+        width: 100%;
+        max-width: 1200px; 
+        padding: 50px 20px;
+        margin-top: 50px;
+        box-sizing: border-box;
+    }
+
+    .section-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+        position: relative; 
+    }
+
+    .section-header h2 {
+        font-size: 32px;
+        font-weight: bold;
+        color: #333;
+        margin: 0;
+    }
+
+    .all-button {
+        background-color: #ffc107; 
+        color: #333;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 14px;
+        text-transform: uppercase;
+        transition: background-color 0.2s;
+    }
+
+    .cards-wrapper {
+        position: relative;
+        padding: 0 45px; 
+    }
+    
+    .cards-container {
+        display: flex;
+        gap: 20px; 
+        overflow-x: scroll; 
+        -webkit-overflow-scrolling: touch; 
+        scrollbar-width: none; 
+        scroll-snap-type: x mandatory; 
+        padding-bottom: 10px; 
+    }
+    
+    .cards-container::-webkit-scrollbar {
+        display: none; 
+    }
+
+    .travel-card {
+        flex: 0 0 calc(25% - 15px); 
+        min-width: 250px; 
+        background-color: white;
+        border-radius: 8px; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        scroll-snap-align: start; 
+        transition: transform 0.3s;
+    }
+    
+    .travel-card:hover {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-image {
+        width: 100%;
+        height: 180px; 
+        overflow: hidden;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+
+    .card-content {
+        padding: 15px;
+        text-align: left;
+        flex-grow: 1; 
+    }
+
+    .location-detail {
+        font-size: 12px;
+        color: #777;
+        margin-bottom: 5px;
+    }
+
+    .card-content h3 {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        margin: 0 0 10px 0;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.4;
+    }
+
+    .nav-arrow {
+        position: absolute;
+        top: 40%; 
+        transform: translateY(-50%);
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        color: #333;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 5;
+    }
+
+    .arrow-left {
+        left: 0;
+    }
+
+    .arrow-right {
+        right: 0;
+    }
+    /* ====================== GEZİLECEK YERLER BÖLÜMÜ STİLLERİ BİTİŞ ====================== */
+    
+    /* ====================== ALT BİLGİ (FOOTER) STİLLERİ ====================== */
+    .footer {
+        width: 100%;
+        background-color: #333; 
+        color: white;
+        padding: 40px 20px;
+        margin-top: 50px;
+        box-sizing: border-box;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        text-align: left;
+    }
+
+    .footer-col {
+        min-width: 200px;
+        margin: 10px;
+    }
+
+    .footer-col h4 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #228B22; 
+        border-bottom: 2px solid #228B22;
+        padding-bottom: 5px;
+    }
+
+    .footer-col a {
+        color: #ccc;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+        transition: color 0.3s;
+    }
+
+    .footer-col a:hover {
+        color: white;
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #444;
+        font-size: 14px;
+        color: #aaa;
+        text-align: center;
+    }
 
   </style>
 </head>
 <body>
 
   <div class="navbar">
-    <div class="logo"><img src="logo.png" alt="" style="width: 100px;"> </div>
-  </div>
-
-  <div class="search-container">
-    <div class="search-box">
-      <input type="text" id="city-input" placeholder="Şehiri Ara..." autocomplete="off">
+    <div class="logo"><img src="logo.png" alt="Logo"></div>
+    <div class="main-menu">
+        <a href="ekip.html">Hakkında</a>
+        <a href="#populer">Popüler Yerler</a>
     </div>
-    <div id="autocomplete-list"></div>
+    <div class="auth-buttons">
+        <a href="GirişPaneli.html" class="login-button" style="color: #228B22;">Giriş Yap</a>
+    </div>
+  </div>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+  <h1 class="main-heading">Rotamız Neresi?</h1> 
+  <div class="search-flex-wrapper">
+    <div class="search-container">
+      <div class="search-box">
+        <input type="text" id="city-input" placeholder="Şehiri Ara..." autocomplete="off">
+      
+      </div>
+      <div id="autocomplete-list"></div>
+    </div>
+    <button class="orta-buton">Keşfet 🔍</button>
+  </div>
+    
+  <div class="slideshow-container">
+    <img id="slideshow-image" src="" alt="Şehir Resmi">
+  </div>
+  <div class="travel-section">
+    <div class="section-header">
+        <h2>En Çok Sevilen Yerler</h2>
+       
+    </div>
+
+    <div class="cards-wrapper">
+        <button class="nav-arrow arrow-left" id="left-arrow">←</button>
+        <button class="nav-arrow arrow-right" id="right-arrow">→</button>
+        
+        <div class="cards-container" id="travel-cards-container">
+            <div class="travel-card">
+                <div class="card-image">
+                    <img src="" alt="">
+                </div>
+                <div class="card-content">
+                    <p class="location-detail">a</p>
+                    <h3>b</h3>
+                    <p class="description">c</p>
+                </div>
+            </div>
+
+            <div class="travel-card">
+                <div class="card-image">
+                    <img src="" alt="">
+                </div>
+                <div class="card-content">
+                    <p class="location-detail">a</p>
+                    <h3>b</h3>
+                    <p class="description">c</p>
+                </div>
+            </div>
+
+            <div class="travel-card">
+                <div class="card-image">
+                    <img src="" alt="">
+                </div>
+                <div class="">
+                    <p class="location-detail">a</p>
+                    <h3>b</h3>
+                    <p class="description">c</p>
+                </div>
+            </div>
+
+            <div class="travel-card">
+                <div class="card-image">
+                    <img src="" alt="">
+                </div>
+                <div class="card-content">
+                    <p class="location-detail">a</p>
+                    <h3>b</h3>
+                    <p class="description">c</p>
+                </div>
+            </div>
+            
+            <div class="travel-card">
+                <div class="card-image">
+                    <img src="" alt="">
+                </div>
+                <div class="card-content">
+                    <p class="location-detail">a</p>
+                    <h3>b</h3>
+                    <p class="description">c</p>
+                </div>
+            </div>
+             <div class="travel-card">
+                <div class="card-image">
+                    <img src="" alt="">
+                </div>
+                <div class="card-content">
+                    <p class="location-detail">a</p>
+                    <h3>b</h3>
+                    <p class="description">c</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  </div>
+  <div class="dynamic-banner-wrapper">
+    <div class="banner-inner">
+      <div class="banner-image-block">
+        <img src="tatil.2.png" alt="Tatil aktiviteleri ve güzellikler">
+      </div>
+      
+      <div class="banner-text-block">
+        <h4>Tadına Doyulmaz Lezzetler ve Huzur Dolu Güzellikler</h4>
+        <p>
+          En iyi yerel yemekleri deneyimleyin ve damak zevkinize hitap eden lezzetleri keşfedin.
+        </p>
+        <p>
+          Doğanın sunduğu en güzel manzaralar ve huzur dolu doğal güzellikler ruhunuzu dinlendirecek.
+        </p>
+        <p>
+          Her köşede sizi bekleyen eşsiz deneyimlerle unutulmaz bir seyahat sizi çağırıyor.
+        </p>
+      </div>
+    </div>
   </div>
 
-  <button class="orta-buton">Keşfet 🔍</button>
-
-<script>
-  // Türkiye'deki şehirlerin listesi (Büyük harfe duyarsız arama için hepsi küçük harf)
+  <div class="video-player-section">
+      <h2 style="text-align: center; color: #228B22;">Her köşede sizi bekleyen eşsiz deneyimlerle unutulmaz bir seyahat sizi çağırıyor</h2>
+      <div class="video-container">
+          <video id="v1" src="video1.mp4" muted playsinline></video>
+          <video id="v2" src="video3.mp4" muted playsinline></video>
+          <video id="v3" src="video2.mp4" muted playsinline></video>
+          <video id="v4" src="video4.mp4" muted playsinline></video>
+          <video id="v5" src="vidoe5.mp4" muted playsinline></video>
+      </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <img src="logo.png" style="width: 200px;height: 200px;">
+        <div class="footer-col">
+          
+            <h4>Hakkımızda</h4>
+            <a href="ekip.html">Ekibimiz</a>
+        </div>
+        <div class="footer-col">
+            <h4>Hizmetler</h4>
+            <p>Şehir Rehberleri</p>
+            <p>Rota Planlama</p>
+            <a href="#">Rezervasyon</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+       Bu sayfa sadece bir deneme sayfasıdır gerçekliligi yoktur!
+    </div>
+  </footer>
+  <script>
+  // Türkiye'deki şehirlerin listesi 
   const turkishCities = [
     "adana", "adıyaman", "afyonkarahisar", "ağrı", "amasya", "ankara", "antalya", "artvin",
     "aydın", "balıkesir", "bilecik", "bingöl", "bitlis", "bolu", "burdur", "bursa", "çanakkale",
-    "çankırı", "çorum", "denizli", "diyarbakır", "düzce", "edirne", "elazığ", "erzincan",
+    "çankırı", "çorum", "denizli", "diyarbakır",
+    // ... [Diğer şehirler] ...
+    "düzce", "edirne", "elazığ", "erzincan",
     "erzurum", "eskişehir", "gaziantep", "giresun", "gümüşhane", "hakkari", "hatay", "ığdır",
     "ısparta", "istanbul", "izmir", "kahramanmaraş", "karabük", "karaman", "kars", "kastamonu",
     "kayseri", "kilis", "kırıkkale", "kırklareli", "kırşehir", "kocaeli", "konya", "kütahya",
@@ -207,6 +723,7 @@ else if (selectedCity.toLowerCase() === 'ankara') {
 else if (selectedCity.toLowerCase() === 'zonguldak') {
     window.open('zonguldak.html');
 }
+// ... [Diğer şehir koşulları] ...
 else if (selectedCity.toLowerCase() === 'yozgat') {
     window.open('yozgat.html');
 }
@@ -431,6 +948,7 @@ else if (selectedCity.toLowerCase() === 'adıyaman') {
   }
 });
 
+  let currentFocus = -1; 
   const input = document.getElementById("city-input");
   const listContainer = document.getElementById("autocomplete-list");
 
@@ -445,7 +963,7 @@ else if (selectedCity.toLowerCase() === 'adıyaman') {
     if (!val) { return false; }
 
     // Geçerli aktif öneri indeksi
-    let currentFocus = -1;
+    currentFocus = -1; 
 
     // Önerilerin ekleneceği div'i oluştur
     const a = document.createElement("DIV");
@@ -455,7 +973,6 @@ else if (selectedCity.toLowerCase() === 'adıyaman') {
 
     // Bütün şehirler arasında döngü yap
     for (let i = 0; i < turkishCities.length; i++) {
-      // Girilen değer (küçük harfe dönüştürülmüş) şehir adında (küçük harfe dönüştürülmüş) bulunuyorsa
       const city = turkishCities[i];
       const normalizedVal = val.toLowerCase();
 
@@ -505,8 +1022,7 @@ else if (selectedCity.toLowerCase() === 'adıyaman') {
       if (currentFocus > -1) {
         if (x) x[currentFocus].click();
       } else {
-        // Eğer Enter'a basıldığında liste açıksa ve hiçbir şey seçili değilse,
-        // Keşfet butonu işlevini burada tetikleyebilirsiniz (şu an boş).
+         document.querySelector('.orta-buton').click();
       }
     }
   });
@@ -532,14 +1048,127 @@ else if (selectedCity.toLowerCase() === 'adıyaman') {
         x[i].parentNode.removeChild(x[i]);
       }
     }
-    currentFocus = -1; // Kapatılınca odak sıfırlanır
+    currentFocus = -1; 
   }
 
   // Input dışına tıklandığında öneri listesini kapat
   document.addEventListener("click", function (e) {
     closeAllLists(e.target);
   });
-  // yeni güncelleme //
+  
+  
+  // -------------------------- SÜREKLİ DEĞİŞEN RESİM JAVASCRIPT KISMI --------------------------
+
+  const slideshowImages = [
+      'Safranbolu.jpg', 
+      'Ankara.jpg',
+      'Istanbul.jpg' 
+  ];
+
+  let currentImageIndex = 0; 
+  const imageElement = document.getElementById('slideshow-image');
+  const changeInterval = 4000; 
+
+  function changeImage() {
+      imageElement.style.opacity = 0;
+
+      setTimeout(() => {
+          currentImageIndex++;
+          if (currentImageIndex >= slideshowImages.length) {
+              currentImageIndex = 0;
+          }
+          imageElement.src = slideshowImages[currentImageIndex] || 'Safranbolu.jpg'; 
+          imageElement.style.opacity = 1;
+      }, 1000); 
+  }
+
+  setInterval(changeImage, changeInterval);
+
+  if (imageElement) {
+    imageElement.src = slideshowImages[currentImageIndex] || 'Safranbolu.jpg'; 
+  }
+
+  // -------------------------- SÜREKLİ DEĞİŞEN RESİM JAVASCRIPT KISMI BİTİŞ --------------------------
+  
+  // -------------------------- VİDEO OYNATICI JAVASCRIPT KISMI (Sürekli Döngü) --------------------------
+  const videos = document.querySelectorAll('.video-container video');
+  let currentVideoIndex = -1; // -1'den başla, ilk çağrıda 0 olacak
+
+  function switchVideo(nextIndex) {
+      if (videos.length === 0) return;
+
+      const currentVideo = (currentVideoIndex >= 0) ? videos[currentVideoIndex] : null;
+      // İndeksi kontrol ederek döngüyü tamamla
+      const newNextIndex = nextIndex % videos.length;
+      const nextVideo = videos[newNextIndex];
+      
+      // 1. Önceki videoyu durdur ve gizle
+      if (currentVideo) {
+          currentVideo.pause();
+          currentVideo.currentTime = 0;
+          // Yumuşak geçiş için opaklığı 0 yap
+          currentVideo.style.opacity = 0; 
+      }
+
+      // 2. Sonraki videoyu göstermeye başla
+      nextVideo.style.opacity = 1;
+
+      // 3. Sonraki videoyu oynatmayı dene
+      nextVideo.currentTime = 0;
+      nextVideo.play()
+          .then(() => {
+              // Başarıyla oynatıldıysa, yeni indeksi ayarla
+              currentVideoIndex = newNextIndex;
+          })
+          .catch(error => {
+              // Oynatma hatası olursa (dosya bulunamaz, bozuk, vb.), sonraki videoya geçişi zorla
+              console.error("Video oynatma hatası:", nextVideo.src, error);
+              // Hata sonrası hemen bir sonraki videoya geçmek için küçük bir gecikme ekle
+              setTimeout(() => {
+                  switchVideo(newNextIndex + 1); // Bir sonraki videoyu dene
+              }, 500); 
+          });
+      
+      // 4. Video Bittiğinde Bir Sonrakine Geç
+      nextVideo.onended = () => {
+          // Yumuşak geçişi sağlamak için kısa bir gecikme ve ardından bir sonraki videoya geç
+          setTimeout(() => switchVideo(newNextIndex + 1), 50);
+      };
+  }
+
+
+  // Başlangıç: İlk videoyu başlat
+  window.addEventListener('load', () => {
+      // Tarayıcı kısıtlamaları nedeniyle 1 saniye bekle ve ilk videoyu başlat
+      if (videos.length > 0) {
+          setTimeout(() => switchVideo(0), 1000); 
+      }
+  });
+  // -------------------------- VİDEO OYNATICI JAVASCRIPT KISMI BİTİŞ --------------------------
+
+
+  // -------------------------- GEZİLECEK YERLER OK KONTROLÜ --------------------------
+  const cardsContainer = document.getElementById('travel-cards-container');
+  const leftArrow = document.getElementById('left-arrow');
+  const rightArrow = document.getElementById('right-arrow');
+
+  if (cardsContainer) {
+      leftArrow.addEventListener('click', () => {
+        cardsContainer.scrollBy({
+          left: -270, 
+          behavior: 'smooth'
+        });
+      });
+
+      rightArrow.addEventListener('click', () => {
+        cardsContainer.scrollBy({
+          left: 270, 
+          behavior: 'smooth'
+        });
+      });
+  }
+  // -------------------------- GEZİLECEK YERLER OK KONTROLÜ BİTİŞİ --------------------------
+
 </script>
 
 </body>
