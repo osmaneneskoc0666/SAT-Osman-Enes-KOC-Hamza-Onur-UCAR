@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hakkımızda - Rotamız Neresi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      padding-top: 60px; /* Navbar yüksekliği kadar boşluk */
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      background-color: #f7f7f7; /* Ana sayfadaki açık gri tonu */
+    }
+    #borderimg1 {
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(border.png) 50 round;
+    }
+    /*---------------------------------- üst menünün ayarları (Ana sayfadan kopyalandı)---------------------- */
+    .navbar { 
+      background-color:#228B22;
+      overflow: hidden;
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      padding: 10px 40px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      box-sizing: border-box; 
+      z-index: 10;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px; 
+      display: block;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #fff;
+      color: #228B22;
+      border-radius: 5px;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: white;
+      letter-spacing: 1px;
+    }
+    
+    .logo img {
+        width: 100px;
+        display: block;
+    }
+    
+    .main-menu { 
+      display: flex;
+      justify-content: center; 
+      flex-grow: 1; 
+    }
+    
+    .auth-buttons { 
+        display: flex;
+        align-items: center;
+        gap: 20px; 
+    }
+
+    .login-button {
+      background-color: white;
+      color: #228B22;
+      border: 2px solid white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .login-button:hover {
+      background-color: #228B22;
+      color: white;
+      border: 2px solid white;
+    }
+    /*-------------------- üst menünün ayarları bitiş------------------- */
+
+
+    /* ====================== HAKKIMIZDA ANA İÇERİK ====================== */
+    .about-container {
+      width: 90%;
+      max-width: 1000px; /* Daha dar bir alan */
+      margin: 40px auto;
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      flex-grow: 1; /* İçeriğin sayfada esnek olarak yer kaplaması için */
+    }
+
+    .about-container h1 {
+      font-size: 42px;
+      color: #228B22; 
+      margin-bottom: 20px;
+      border-bottom: 3px solid #f7f7f7;
+      padding-bottom: 10px;
+    }
+
+    .mission-statement {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 50px;
+      line-height: 1.6;
+    }
+
+    /* ====================== EKİP KARTLARI ====================== */
+    .team-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .team-section h2 {
+      font-size: 30px;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .team-cards-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px; /* İki kart arasında daha fazla boşluk */
+    }
+
+    .team-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 350px; /* Kartları büyüttük */
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .member-photo {
+      width: 180px; /* Fotoğrafı büyüttük */
+      height: 180px; /* Fotoğrafı büyüttük */
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 15px;
+      border: 5px solid #228B22;
+      overflow: hidden;
+    }
+
+    .member-photo img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .team-card h3 {
+      font-size: 24px;
+      color: #333;
+      margin: 10px 0 5px 0;
+    }
+
+    .team-card p.role {
+      font-size: 18px;
+      color: #228B22;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .team-card p.bio {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .team-cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+      .team-card {
+        width: 90%;
+        max-width: 400px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo"><img src="logo.png" alt="Logo"></div>
+    <div class="main-menu">
+        <a href="hamza.html">Ana Sayfa</a> 
+    </div>
+    <div class="auth-buttons">
+        <a href="GirişPaneli.html" class="login-button" style="color: #228B22;">Giriş Yap</a>
+    </div>
+  </div>
+
+  <div class="about-container">
+    <h1>Seyahat Rotası Ekibi</h1>
+    
+    <p class="mission-statement">
+      
+    </p>
+
+    <div class="team-section">
+      <h2>Kurucularımız</h2>
+      <div class="team-cards-wrapper">
+        
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="hamza.jpg" alt="Hamza Yılmaz Fotoğrafı"> 
+          </div>
+          <h3>Hamza Onur UÇAR</h3>
+          <p class="role">Frontend</p>
+          <p class="bio">Yozgat Bozok Üniversitesi / Bilgisayar Programcılığı.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="member-photo">
+            <img src="enes.jpg" alt="Ayşe Kaya Fotoğrafı">
+          </div>
+          <h3>Osman Enes KOÇ</h3>
+          <p class="role">Backend</p>
+          <p class="bio">Yozgat Bozok Üniversitesi / Bilgisayar Programcılığı.</p>        </div>
+          <img  src="beraber.jpg" style="max-width : 1000px;max-height: 500px;">
+      </div>
+    </div>
+  </div>
+
+  </body>
+</html>
