@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AĞRI</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>        
+        /* Ankara sayfanızdaki tüm CSS kodları buraya kopyalanmıştır. */
+        /* Genel Stil Ayarları */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6; 
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        h1{ text-align: center; }
+        h2{ text-align: center; }
+        h3{ text-align: center; }
+        
+        /* 1. ÜST MENÜ STİLLERİ */
+        .ust-menu-alani {
+            background-color: #228B22; /* Zümrüt Yeşili ton */
+            color: white;
+            padding: 15px 5%; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo { font-size: 24px; font-weight: bold; letter-spacing: 1px; }
+        
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            margin-left: 5px;
+            border: 1px solid transparent;
+            transition: all 0.3s;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .menu a i { margin-right: 5px; }
+
+        .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: white;
+        }
+        
+        /* 2. ORTALANMIŞ RESİM ve HİZALI METİN ALANI STİLLERİ */
+        main {
+            padding: 40px 20px;
+            display: block;
+        }
+        
+        .content-area {
+            width: 90%; 
+            max-width: 1000px; 
+            margin: 0 auto 40px auto;
+            padding: 20px;
+            background-color: white; 
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        .image-wrapper {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 320px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-content {
+            padding-top: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .text-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        /* 4. HIZLI ERİŞİM BUTONLARI STİLLERİ */
+        .quick-links {
+            margin-top: 20px; 
+            padding: 5px 0;
+            border-radius: 3px;
+            text-align: center;
+        }
+        
+        .quick-links h3 {
+            color: #228B22; /* Yeni Renk */
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #eee;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .links-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap; 
+            gap: 15px; 
+            padding: 0 10px;
+        }
+
+        .link-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            flex-basis: calc(25% - 15px); 
+            min-width: 100px; 
+            padding: 15px 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: white; 
+            border: 1px solid #ffffff;
+        }
+
+        .link-item i {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: #228B22; /* Yeni Renk */
+        }
+        
+        .link-item span {
+            font-size: 14px;
+        }
+
+        .link-item:hover {
+            background-color: #228B22; /* Yeni Renk */
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .link-item:hover i {
+            color: white; 
+        }
+        
+        /* 5. BLOK GRİD STİLLERİ */
+        .destinations-grid, .restoran-grid, .kuaför-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 20px; 
+            margin-top: 20px;
+            padding: 20px;
+            border-top: 1px solid #eee; 
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        .restoran-grid, .kuaför-grid {
+            margin-top: 30px; 
+            border-top: 1px solid #ccc;
+        }
+
+        .destination-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 260px; 
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            display: block;
+        }
+
+        .card-content {
+            padding: 10px 15px;
+            text-align: left;
+        }
+
+        .card-content h4 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .description-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            gap: 10px;
+        }
+        
+        .description-flex p {
+            margin: 0;
+            font-size: 15px; 
+            color: #666;
+            flex-grow: 1; 
+        }
+        
+        /* Zümrüt Yeşili "ZİYARET ET" BUTONU STİLİ */
+        .git-button {
+            background-color: #00A86B; /* Yeni Renk */
+            color: white;
+            border: none;
+            padding: 7px 14px; 
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px; 
+            transition: background-color 0.3s;
+            white-space: nowrap; 
+        }
+        
+        .git-button:hover {
+            background-color: #008055; /* Daha koyu yeşil */
+        }
+
+
+        /* Küçük ekranlar (Duyarlı Tasarım) */
+        @media (max-width: 768px) {
+            .ust-menu-alani {
+                flex-direction: column; 
+                padding: 15px 20px;
+            }
+            .link-item {
+                flex-basis: calc(50% - 15px);
+                margin-bottom: 10px;
+            }
+            .destinations-grid, .restoran-grid, .kuaför-grid {
+                grid-template-columns: 1fr; 
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="ust-menu-alani">
+        <div class="logo"><img src="logo.png" alt="logo goruntülenmiyor" style="width: 100px;"></div>
+        <nav class="menu">
+            <a href="https://www.obilet.com/otobus-bileti/agri" target="_blank"><i class="fas fa-map-marked-alt"></i> Otobüs </a>
+            
+            <a href="https://www.trivago.com.tr/tr/s?q=otel+agri" target="_blank"><i class="fas fa-bed"></i> Konaklama</a>
+            
+            <a href="https://www.obilet.com/ucak-bileti/agri" target="_blank"><i class="fas fa-plane"></i> Transfer</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        <div class="content-area">
+            <h1 style="text-align: center;"><b>Ağrı</b></h1>
+            
+            <div class="image-wrapper"> 
+                <img src="agri.jpg" alt="Ağrı şehir manzarası" style="width: 650px;">
+            </div>
+            
+            <div class="text-content">
+                <H2><b>(04)Hakkında</b></H2>
+                <p><b>
+                Ağrı, Doğu Anadolu Bölgesi'nde, ismini Türkiye'nin en yüksek zirvesi olan Ağrı Dağı'ndan alan serhat şehridir.<br>
+                Zengin tarihi eserlere ve doğal güzelliklere sahiptir.<br>
+                Şehir, özellikle kış turizmi potansiyeli ve İshak Paşa Sarayı gibi mimari şaheserleriyle dikkat çeker.</b>
+                </p>
+                
+                <div class="quick-links">
+                    <h3>Hızlı Erişim Bağlantıları</h3>
+                    <div class="links-container">
+                        <a href="#" class="link-item">
+                            <i class="fas fa-utensils"></i>
+                            <span>Restorant</span>
+                        </a>
+                        <a href="#" class="link-item">
+                            <i class="fas fa-landmark"></i>
+                            <span>Tarih/Gezi</span>
+                        </a>
+                        <a href="#" class="link-item">
+                            <i class="fas fa-cut"></i>
+                            <span>Kuaför</span>
+                        </a>
+                      
+
+                    </div>
+                    
+                    <h2 style="margin-top: 20px; margin-bottom: 20px; padding-top: 20px; border-bottom: 2px solid #eee;">Gezi Ve Tarih</h2>
+                    
+                    <div class="destinations-grid">
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="ishak_pasa_sarayi.jpg" alt="İshak Paşa Sarayı">
+                            </div>
+                            <div class="card-content">
+                                <h4>İshak Paşa Sarayı</h4>
+                                <div class="description-flex">
+                                    <p>Osmanlı Dönemi Sarayı, Tarihi Yapı</p>
+                                    <button class="git-button" onclick="window.open('http://agri.com/ishakpasa', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="agri_dagi.jpg" alt="Ağrı Dağı">
+                            </div>
+                            <div class="card-content">
+                                <h4>Ağrı Dağı</h4>
+                                <div class="description-flex">
+                                    <p>Türkiye'nin En Yüksek Zirvesi, Efsanevi Dağ</p>
+                                    <button class="git-button" onclick="window.open('http://agri.com/agridagi', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="meteor_cukuru.jpg" alt="Meteor Çukuru">
+                            </div>
+                            <div class="card-content">
+                                <h4>Meteor Çukuru</h4>
+                                <div class="description-flex">
+                                    <p>Doğa Harikası, Dünyanın İkinci Büyük Meteor Çukuru</p>
+                                    <button class="git-button" onclick="window.open('http://agri.com/meteor', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="dogubeyazit_kalesi.jpg" alt="Doğubayazıt Kalesi">
+                            </div>
+                            <div class="card-content">
+                                <h4>Doğubayazıt Kalesi (Urartu Kalesi)</h4>
+                                <div class="description-flex">
+                                    <p>Tarihi Kale Kalıntıları, Urartu Dönemi</p>
+                                    <button class="git-button" onclick="window.open('http://agri.com/dogubeyazit_kalesi', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    
+                    <h2 style="margin-top: 40px; margin-bottom: 20px; padding-top: 20px; border-bottom: 2px solid #eee;">Popüler Restoranlar</h2>
+                    <div class="restoran-grid">
+                         </div>
+                    
+                    <h2 style="margin-top: 40px; margin-bottom: 20px; padding-top: 20px; border-bottom: 2px solid #eee;">Popüler Kuaför ve Güzellik Salonları</h2>
+                    <div class="kuaför-grid">
+                         </div>
+                    
+                    </div>
+            </div>
+        </div>
+        
+    </main>
+
+</body>
+</html>

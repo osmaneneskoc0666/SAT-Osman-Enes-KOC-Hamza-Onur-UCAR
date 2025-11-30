@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEVŞEHİR</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>        
+        /* Genel Stil Ayarları */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6; /* Açık gri arka plan */
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        h1{ text-align: center; }
+        h2{ text-align: center; }
+        h3{ text-align: center; }
+        
+        /* Tema Rengi: Toprak/Kapadokya Rengi - Chocolate */
+        :root {
+            --primary-color: #D2691E; /* Kahverengi/Çikolata */
+            --secondary-color: #A0522D; /* Sienne */
+        }
+        
+        /* 1. ÜST MENÜ STİLLERİ */
+        .ust-menu-alani {
+            background-color: var(--primary-color); 
+            color: white;
+            padding: 15px 5%; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo { font-size: 24px; font-weight: bold; letter-spacing: 1px; }
+        
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            margin-left: 5px;
+            border: 1px solid transparent;
+            transition: all 0.3s;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .menu a i { margin-right: 5px; }
+
+        .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: white;
+        }
+        
+        /* 2. ORTALANMIŞ RESİM ve HİZALI METİN ALANI STİLLERİ */
+        main {
+            padding: 40px 20px;
+            display: block;
+        }
+        
+        .content-area {
+            width: 90%; 
+            max-width: 1000px; 
+            margin: 0 auto 40px auto;
+            padding: 20px;
+            background-color: white; 
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        .image-wrapper {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 320px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-content {
+            padding-top: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .text-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        /* 4. HIZLI ERİŞİM BUTONLARI STİLLERİ */
+        .quick-links {
+            margin-top: 20px; 
+            padding: 5px 0;
+            border-radius: 3px;
+            text-align: center;
+        }
+        
+        .quick-links h3 {
+            color: var(--primary-color); 
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #eee;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .links-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap; 
+            gap: 15px; 
+            padding: 0 10px;
+        }
+
+        .link-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            flex-basis: calc(25% - 15px); 
+            min-width: 100px; 
+            padding: 15px 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: white; 
+            border: 1px solid #ffffff;
+        }
+
+        .link-item i {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: var(--primary-color); 
+        }
+        
+        .link-item span {
+            font-size: 14px;
+        }
+
+        .link-item:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .link-item:hover i {
+            color: white; 
+        }
+        
+        /* 5. BLOK GRİD STİLLERİ (Gezi, Restoran, Kuaför) */
+        .destinations-grid, .restoran-grid, .kuaför-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 eşit sütun */
+            gap: 20px; /* Bloklar arası boşluk */
+            margin-top: 20px;
+            padding: 20px;
+            border-top: 1px solid #eee; /* Ayırıcı */
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        /* Yeni gridler için üstten boşluk */
+        .restoran-grid, .kuaför-grid {
+            margin-top: 30px; 
+            border-top: 1px solid #ccc;
+        }
+
+        .destination-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Resim Alanı Stilleri */
+        .card-image {
+            width: 100%;
+            height: 260px; /* Resim Yüksekliği */
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            display: block;
+        }
+
+        .card-content {
+            padding: 10px 15px;
+            text-align: left;
+        }
+
+        .card-content h4 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Açıklama ve Butonun Yan Yana Gelmesi İçin Flex Yapı */
+        .description-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Öğeleri dikeyde ortala */
+            gap: 10px;
+        }
+        
+        .description-flex p {
+            margin: 0;
+            font-size: 15px; 
+            color: #666;
+            flex-grow: 1; /* Metnin kalan alanı doldurmasını sağla */
+        }
+        
+        /* BUTON STİLİ */
+        .git-button {
+            background-color: var(--primary-color); 
+            color: white;
+            border: none;
+            padding: 7px 14px; 
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px; 
+            transition: background-color 0.3s;
+            white-space: nowrap; 
+        }
+        
+        .git-button:hover {
+            background-color: var(--secondary-color); 
+        }
+
+
+        /* Küçük ekranlar (Duyarlı Tasarım) */
+        @media (max-width: 768px) {
+            .ust-menu-alani {
+                flex-direction: column; 
+                padding: 15px 20px;
+            }
+            .links-container {
+                justify-content: center;
+            }
+            .link-item {
+                flex-basis: calc(50% - 15px);
+                margin-bottom: 10px;
+            }
+            .destinations-grid, .restoran-grid, .kuaför-grid {
+                grid-template-columns: 1fr; /* Tek sütun */
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="ust-menu-alani">
+        <div class="logo"><img src="logo.png" alt="logo goruntülenmiyor" style="width: 100px;"></div>
+        <nav class="menu">
+            <a href="https://www.obilet.com/otobus-bileti/nevsehir" target="_blank"><i class="fas fa-map-marked-alt"></i> Otobüs </a>
+            
+            <a href="https://www.trivago.com.tr/tr/s?q=otel+kapadokya" target="_blank"><i class="fas fa-bed"></i> Konaklama</a>
+            
+            <a href="https://www.obilet.com/ucak-bileti/nevsehir" target="_blank"><i class="fas fa-plane"></i> Uçuş (Nevşehir)</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        
+        <div class="content-area">
+            <h1 style="text-align: center;"><b>Nevşehir</b></h1>
+            
+            <div class="image-wrapper"> 
+                <img src="nevsehir.jpg" style="width: 650px;" alt="Kapadokya Balon Manzarası">
+            </div>
+            
+            <div class="text-content">
+                <H2><b>(50)Hakkında - Güzel Atlar Diyarı</b></H2>
+                <p><b>
+                Nevşehir, esas olarak dünyaca ünlü tarihi ve doğal oluşum bölgesi **Kapadokya**'nın merkezidir. <br>
+                **Peri Bacaları**, yer altı şehirleri, kaya otelleri ve özellikle sabah saatlerinde gökyüzünü süsleyen **sıcak hava balonlarıyla** tanınır. <br>
+                Tarihi boyunca Hititlerden Osmanlı'ya kadar pek çok medeniyete ev sahipliği yapmış olan bu şehir, doğa, tarih ve macera turizminin kesişim noktasıdır.
+                </b>
+                </p>
+                
+                <div class="quick-links">
+                    <h3>Hızlı Erişim Bağlantıları</h3>
+                    <div class="links-container">
+                        <a href="#" class="link-item">
+                            <i class="fas fa-utensils"></i>
+                            <span>Restorant</span>
+                        </a>
+                        <a href="#" class="link-item">
+                            <i class="fas fa-landmark"></i>
+                            <span>Tarih/Gezi</span>
+                        </a>
+                        <a href="#" class="link-item">
+                            <i class="fas fa-cut"></i>
+                            <span>Kuaför</span>
+                        </a>
+                      
+
+                    </div>
+                    
+                    <h2 style="margin-top: 20px; margin-bottom: 20px; padding-top: 20px; border-bottom: 2px solid #eee;">Gezi Ve Tarih</h2>
+                    
+                    <div class="destinations-grid">
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="goreme.jpg" alt="Göreme Açık Hava Müzesi">
+                            </div>
+                            <div class="card-content">
+                                <h4>Göreme Açık Hava Müzesi</h4>
+                                <div class="description-flex">
+                                    <p>Kaya Kiliseleri, Manastırlar, Freskler</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M1', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="uchisar_kalesi.jpg" alt="Uçhisar Kalesi">
+                            </div>
+                            <div class="card-content">
+                                <h4>Uçhisar Kalesi</h4>
+                                <div class="description-flex">
+                                    <p>Kapadokya'nın En Yüksek Noktası, Panorama</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M2', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="derinkuyu.jpg" alt="Derinkuyu Yeraltı Şehri">
+                            </div>
+                            <div class="card-content">
+                                <h4>Derinkuyu Yeraltı Şehri</h4>
+                                <div class="description-flex">
+                                    <p>Tarihi Sığınak, Mağara Yaşamı</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M3', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="uc_guzeller.jpg" alt="Üç Güzeller Peri Bacaları">
+                            </div>
+                            <div class="card-content">
+                                <h4>Üç Güzeller (Peri Bacaları)</h4>
+                                <div class="description-flex">
+                                    <p>Sembolik Kaya Oluşumu, Fotoğraf Noktası</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M4', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <h2 style="margin-top: 40px; margin-bottom: 20px; padding-top: 20px; border-bottom: 2px solid #eee;">Popüler Restoranlar</h2>
+                    
+                    <div class="restoran-grid">
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="testi_kebabi.jpg" alt="Testi Kebabı Restoranı">
+                            </div>
+                            <div class="card-content">
+                                <h4>Bolu Et Mangal Restoranı (Merkez)</h4>
+                                <div class="description-flex">
+                                    <p>Meşhur Testi Kebabı, Et Yemekleri</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M5', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="han_odasi.jpg" alt="Han Odası Saklıbahçe">
+                            </div>
+                            <div class="card-content">
+                                <h4>Han Odası Saklıbahçe (Uçhisar)</h4>
+                                <div class="description-flex">
+                                    <p>Kiremitte Et Sarma, Doğa İçinde Kahvaltı</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M6', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="turk_gecesi.jpg" alt="Türk Gecesi Gösterisi">
+                            </div>
+                            <div class="card-content">
+                                <h4>Yaşar Baba / Uranos (Türk Gecesi)</h4>
+                                <div class="description-flex">
+                                    <p>Akşam Yemeği Eşliğinde Şov ve Fasıl</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M7', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="zeytin_ev.jpg" alt="Zeytin Cafe Ev Yemekleri">
+                            </div>
+                            <div class="card-content">
+                                <h4>Zeytin Cafe Ev Yemekleri (Merkez)</h4>
+                                <div class="description-flex">
+                                    <p>Yöresel Yaprak Sarma, Ev Yemekleri</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M8', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <h2 style="margin-top: 40px; margin-bottom: 20px; padding-top: 20px; border-bottom: 2px solid #eee;">Popüler Kuaför ve Güzellik Salonları</h2>
+                    
+                    <div class="kuaför-grid">
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="kapadokya_hair.jpg" alt="Kapadokya Hair Studio">
+                            </div>
+                            <div class="card-content">
+                                <h4>Kapadokya Hair Studio (Ürgüp)</h4>
+                                <div class="description-flex">
+                                    <p>Unisex Salon, Saç Tasarım</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M9', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="peri_kizi.jpg" alt="Peri Kızı Güzellik Salonu">
+                            </div>
+                            <div class="card-content">
+                                <h4>Peri Kızı Güzellik Salonu (Merkez)</h4>
+                                <div class="description-flex">
+                                    <p>Cilt Bakımı, Lazer, Kalıcı Makyaj</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M10', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="nevsehir_erkek.jpg" alt="Nevşehir Barber Club">
+                            </div>
+                            <div class="card-content">
+                                <h4>Nevşehir Barber Club</h4>
+                                <div class="description-flex">
+                                    <p>Erkek Kuaförü, Saç & Sakal Tasarımı</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M11', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="avanos_hair.jpg" alt="Avanos Hair & Art">
+                            </div>
+                            <div class="card-content">
+                                <h4>Avanos Hair & Art</h4>
+                                <div class="description-flex">
+                                    <p>Gelin Saçı, Özel Tasarımlar (Avanos)</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M12', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    </div>
+            </div>
+        </div>
+        
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* =================================================== */
+        /* CSS KODLARI BAŞLANGICI */
+        /* =================================================== */
+
+        /* Genel Ayarlar */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Ana Kapsayıcı: Resim ve Giriş Panelini içerir */
+        .main-wrapper {
+            display: flex;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            max-width: 1000px;
+            width: 90%;
+        }
+
+        /* Sol Taraf: Resim Alanı */
+        .image-side {
+            flex: 1;
+            min-width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            /* ÖNEMLİ: Hareket eden resim için referans noktası ve dışarı taşmayı engelle */
+            position: relative; 
+            overflow: hidden; 
+        }
+
+        /* RESİM STİLİ (4 Yönlü Hareket İçin Güncellendi) */
+        .image-side img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: contain;
+            /* ÖNEMLİ: Resmin hareket edebilmesi için mutlak konumlandırma */
+            position: absolute; 
+            
+            /* Başlangıçta padding boşluğu kadar içeride başlasın */
+            top: 20px; 
+            left: 20px;
+            transform: none; /* Önceki dikey ortalamayı iptal et */
+
+            /* Resim boyutunu sabitleyerek çarpışma hesaplamasını kolaylaştırıyoruz */
+            width: 250px; 
+        }
+
+        /* Ortadaki Dikey Çizgi */
+        .divider {
+            width: 2px;
+            background-color: #eee;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        /* Sağ Taraf: Giriş Paneli */
+        .login-side {
+            flex: 1;
+            min-width: 400px;
+            padding: 40px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .login-side h2 {
+            text-align: center;
+            color: #333;
+            margin: 0 0 30px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #228B22;
+            font-size: 24px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .login-side input[type="text"],
+        .login-side input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .login-side input:focus {
+            border-color: #228B22;
+            box-shadow: 0 0 5px #228B22;
+            outline: none;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .options a.forgot-password {
+            color: #228B22;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .options a.forgot-password:hover {
+            color: #228B22;
+            text-decoration: underline;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 14px;
+            background-color: #228B22;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .login-button:hover {
+            background-color: #228B22;
+        }
+
+        /* Sosyal Medya Girişleri */
+        .social-login {
+            text-align: center;
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .social-login p {
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .social-button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+            margin: 5px 0;
+            transition: opacity 0.3s;
+        }
+
+        .social-button:hover {
+            opacity: 0.9;
+        }
+
+        .social-button.google {
+            background-color: #dd4b39;
+            margin-right: 2%;
+        }
+
+        .social-button.facebook {
+            background-color: #3b5998;
+        }
+
+        /* Mobil Uyumlu Tasarım */
+        @media (max-width: 850px) {
+            .main-wrapper {
+                flex-direction: column;
+                width: 95%;
+                max-width: 500px;
+            }
+            .image-side {
+                min-width: unset;
+                height: 250px;
+                padding: 15px;
+            }
+            .login-side {
+                min-width: unset;
+                padding: 30px 20px;
+            }
+            .divider {
+                display: none;
+            }
+            .social-button {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            /* Mobil görünümde hareketi durdur, resim normal akışına döner */
+            .image-side img {
+                 position: static; 
+                 transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div class="image-side" id="imageSide"> 
+            <img id="hareketliResim" src="panel resmi.png" alt="Türkiye Silüeti ve Bayrağı"> 
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="login-side">
+            <h2><i class="fas fa-sign-in-alt"></i> Giriş Yap</h2>
+            <form id="loginForm">
+                
+                <div class="form-group">
+                    <label for="username">Kullanıcı Adı / E-posta</label>
+                    <input type="text" id="username" name="username" placeholder="Kullanıcı adınızı veya e-posta adresinizi girin" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Şifre</label>
+                    <input type="password" id="password" name="password" placeholder="Şifrenizi girin" required>
+                </div>
+                
+                <div class="options">
+                    <label>
+                        <input type="checkbox" name="remember"> Beni Hatırla
+                    </label>
+                </div>
+                
+                <button type="submit" class="login-button">Giriş Yap</button>
+
+              
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Form gönderimini engelleme (Demo amaçlı)
+        const loginForm = document.getElementById('loginForm');
+
+        if (loginForm) {
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+                
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                alert(`${username}${password}`);
+            });
+        }
+
+        // ===================================================
+        // 4 YÖNLÜ SEKEN ANİMASYON KODLARI
+        // ===================================================
+
+        const resim = document.getElementById('hareketliResim');
+        const kapsayici = document.getElementById('imageSide');
+
+        // Sadece geniş ekranlarda animasyonu çalıştır
+        if (window.innerWidth > 850) {
+            
+            const padding = 20; // image-side CSS'teki padding değeri
+            let x = padding;
+            let y = padding;
+
+            // Rasgele başlangıç hızları ve yönleri
+            let hizX = (Math.random() * 1) + 1; // 1.5 ile 3.5 arasında bir hız
+            let hizY = (Math.random() * 1) + 1;
+
+            // Rasgele başlangıç yönü (sağa/sola ve yukarı/aşağı)
+            if (Math.random() < 0.5) hizX *= -1;
+            if (Math.random() < 0.5) hizY *= -1;
+
+
+            function hareketEttir() {
+                // Konumu güncelle
+                x += hizX;
+                y += hizY;
+
+                // Boyutları al (clientWidth ve offsetWidth tarayıcıya göre değişebilir, 
+                // genelde offsetWidth padding hariç boyuttur, ama biz padding'i ayrıca hesapladık.)
+                const resimGenisligi = resim.offsetWidth;
+                const resimYuksekligi = resim.offsetHeight;
+                const kapsayiciGenisligi = kapsayici.clientWidth;
+                const kapsayiciYuksekligi = kapsayici.clientHeight;
+
+                
+                // =========================
+                // YATAY ÇARPIŞMA KONTROLÜ
+                // =========================
+                
+                // Sağ Kenar Çarpışması
+                if (x + resimGenisligi >= kapsayiciGenisligi - padding) {
+                    hizX = -Math.abs(hizX); 
+                    x = kapsayiciGenisligi - resimGenisligi - padding; 
+                } 
+                // Sol Kenar Çarpışması
+                else if (x <= padding) {
+                    hizX = Math.abs(hizX);
+                    x = padding; 
+                }
+
+                // =========================
+                // DİKEY ÇARPIŞMA KONTROLÜ
+                // =========================
+                
+                // Alt Kenar Çarpışması
+                if (y + resimYuksekligi >= kapsayiciYuksekligi - padding) {
+                    hizY = -Math.abs(hizY); 
+                    y = kapsayiciYuksekligi - resimYuksekligi - padding; 
+                }
+                // Üst Kenar Çarpışması
+                else if (y <= padding) {
+                    hizY = Math.abs(hizY); 
+                    y = padding; 
+                }
+
+
+                // Resmi yeni konuma taşı
+                resim.style.left = x + 'px';
+                resim.style.top = y + 'px';
+
+                // Bir sonraki kareyi iste (requestAnimationFrame ile akıcı animasyon)
+                window.requestAnimationFrame(hareketEttir);
+            }
+
+            // Animasyonu başlat
+            window.requestAnimationFrame(hareketEttir);
+        }
+    </script>
+
+</body>
+</html>
