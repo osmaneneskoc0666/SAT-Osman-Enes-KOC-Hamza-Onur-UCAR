@@ -1,0 +1,832 @@
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5DNZX47R');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title id="mytitle"> Aydın Şehir Merkezi - Kültür Portalı - Medya Kütüphanesi</title>
+
+    <!-- Social Media Tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content=" Aydın Şehir Merkezi" />
+    <meta property="og:description" content="Aydın İl Kültür ve Turizm Müdürlüğü  / /Gezilecek Yerler,Aydın,Parklar - Açık Alanlar,Turizm Aktiviteleri,Aydın İl Kültür ve Turizm Müdürlüğü,Şehir Fotoğrafları,Şehir Merkezi" />
+    <meta property="og:image" content="/repoKulturPortali/large/Dokumanlar/AydinSehirMerkezi3_20160329155812093.jpg?format=jpg&quality=50" />
+    <meta property="og:site_name" content="Kültür Portalı" />
+    <meta property="og:url" content="http://www.kulturportali.gov.tr/medya/fotograf/fotodokuman/5827/-aydin-sehir-merkezi" />
+    <meta name="twitter:card" content="photo" />
+    <meta name="twitter:site" content="@TCKulturPortali" />
+    <meta name="twitter:creator" content="@TCKulturPortali" />
+    <meta name="twitter:domain" content="kulturportali.gov.tr" />
+    <meta name="twitter:image" content="/repoKulturPortali/large/Dokumanlar/AydinSehirMerkezi3_20160329155812093.jpg?format=jpg&quality=50" />
+    <meta name="twitter:url" content="http://www.kulturportali.gov.tr/medya/fotograf/fotodokuman/5827/-aydin-sehir-merkezi" />
+    <meta name="twitter:title" content=" Aydın Şehir Merkezi" />
+    <meta name="twitter:description" content="Aydın İl Kültür ve Turizm Müdürlüğü  / /Gezilecek Yerler,Aydın,Parklar - Açık Alanlar,Turizm Aktiviteleri,Aydın İl Kültür ve Turizm Müdürlüğü,Şehir Fotoğrafları,Şehir Merkezi" />
+
+    <!--Begin:MKHeadScript --------------------------------------- -->
+    
+<link rel="shortcut icon" href="/Mk/images/favicon.png" />
+<link rel="stylesheet" href="/Mk/css/edd.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/Mk/css/edd-reviews.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/Mk/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/Mk/css/fancybox/jquery.fancybox.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A300%2C400%2C400italic%2C700%2C700italic&amp;ver=4.2.2" type="text/css" media="all" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/font-icons.css" type="text/css">
+<link rel="stylesheet" href="/Mk/css/edd-wl.min.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/Mk/css/style-public.css" type="text/css" media="all" />
+<link href="/Mk/css/paging.css" rel="stylesheet" />
+<script type="text/javascript" src="/Mk/assets/js/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript" src="/Mk/js/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="/Mk/css/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="/Mk/js/jquery/jquery.stellar.js"></script>
+<script type="text/javascript" src="/Mk/js/jquery/jquery.mobilemenu.js"></script>
+
+<!-- Owl Carousel Assets -->
+<link href="/Mk/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link href="/Mk/owl-carousel/owl.theme.css" rel="stylesheet">
+
+<!-- cd Tabs -->
+<link href='/Mk/js/cdtabs/css/style.css' rel="stylesheet" />
+
+<!-- Tipsy -->
+<link href="/Mk/js/tipsy/tipsy.css" rel="stylesheet" />
+<script src="/Mk/js/tipsy/jquery.tipsy.js"></script>
+
+<!-- Common Scripts -->
+<script src="/Mk/js/common.js"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+            try {
+                w.yaCounter49108042 = new Ya.Metrika2({
+                    id: 49108042,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true
+                });
+            } catch (e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+</script>
+<noscript>
+    <div>
+        <img src="https://mc.yandex.ru/watch/49108042" style="position: absolute; left: -9999px;" alt="" />
+    </div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
+
+    <!--End:MKHeadScript --------------------------------------- -->
+
+
+    <style type="text/css">
+        /*sinan css*/
+
+        .btnIleri {
+            margin-left: 96%;
+            margin-top: 20%;
+            float: right;
+            cursor: pointer;
+            color: rgba(255,255,255,1);
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            position: absolute;
+            border: 3px solid rgb(249, 249, 249);
+            overflow: hidden;
+            border-radius: 50px;
+            background-image: url(https://www.kulturportali.gov.tr/_ui/images/nextarrow.png);
+            background-repeat: no-repeat;
+            background-position: 23px 23px;
+            height: 60px;
+            width: 60px;
+        }
+
+            .btnIleri::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 55;
+                background-color: rgba(255,255,255,0.25);
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+                -webkit-transform: translate(13%,-190%) rotate(30deg);
+                transform: translate(13%,-190%) rotate(30deg);
+                -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+                transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+            }
+
+            .btnIleri::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 55;
+                background-color: rgba(255,255,255,0.25);
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+                -webkit-transform: translate(-13%,-190%) rotate(-30deg);
+                transform: translate(-13%,-190%) rotate(-30deg);
+                -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+                transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+            }
+
+            .btnIleri::before {
+                -webkit-transition-delay: 0.2s; /* Safari */
+                transition-delay: 0.2s;
+            }
+
+            .btnIleri:hover::before, .btnIleri:hover::after {
+                -webkit-transform: translate(0,0);
+                transform: translate(0,0);
+            }
+
+
+        .btnGeri {
+            margin-left: 1%;
+            margin-top: 20%;
+            cursor: pointer;
+            color: rgba(255,255,255,1);
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            position: absolute;
+            border: 3px solid rgb(249, 249, 249);
+            overflow: hidden;
+            border-radius: 50px;
+            background-image: url(https://www.kulturportali.gov.tr/_ui/images/prevarrow.png);
+            background-repeat: no-repeat;
+            background-position: 23px 23px;
+            height: 60px;
+            width: 60px;
+        }
+
+            .btnGeri::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 55;
+                background-color: rgba(255,255,255,0.25);
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+                -webkit-transform: translate(13%,-190%) rotate(30deg);
+                transform: translate(13%,-190%) rotate(30deg);
+                -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+                transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+            }
+
+            .btnGeri::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 55;
+                background-color: rgba(255,255,255,0.25);
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+                -webkit-transform: translate(-13%,-190%) rotate(-30deg);
+                transform: translate(-13%,-190%) rotate(-30deg);
+                -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+                transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+            }
+
+            .btnGeri::before {
+                -webkit-transition-delay: 0.2s; /* Safari */
+                transition-delay: 0.2s;
+            }
+
+            .btnGeri:hover::before, .btnGeri:hover::after {
+                -webkit-transform: translate(0,0);
+                transform: translate(0,0);
+            }
+
+
+        @media only screen and (max-width: 480px) {
+
+            .btnIleri {
+                margin-left: 87%;
+                margin-top: 30%;
+                background-image: url(https://www.kulturportali.gov.tr/_ui/images/nextarrow.png);
+                background-repeat: no-repeat;
+                background-position: 15px 15px;
+                height: 40px;
+                width: 40px;
+                /*background-color: black;*/
+            }
+
+            .btnGeri {
+                margin-left: 1%;
+                margin-top: 30%;
+                background-image: url(https://www.kulturportali.gov.tr/_ui/images/prevarrow.png);
+                background-repeat: no-repeat;
+                background-position: 15px 15px;
+                height: 40px;
+                width: 40px;
+                /*background-color: black;*/
+            }
+        }
+
+        @media only screen and (min-width : 992px) {
+            #imgAna {
+                /*  min-width: 100%;*/
+                max-height: 600px;
+            }
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            #imgAna {
+                max-height: 500px;
+                min-height: 200px;
+            }
+
+            .btnIleri {
+                margin-left: 91%;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            #imgAna {
+                max-height: 400px;
+                min-height: 200px;
+            }
+        }
+
+
+
+        /* Resmin genişliği için */
+        .posts-wrap {
+            width: 100%;
+            float: none;
+            background-color: #000;
+            padding-top: 40px;
+        }
+
+        #sidebar {
+            float: none;
+            width: 100%;
+            padding-top: 20px;
+            box-sizing: inherit;
+        }
+
+        #single_item_wrap {
+            padding-top: 0;
+        }
+
+        .social-icon.si-small {
+            background-color: #AAA;
+        }
+
+        /*#btnIleri {
+            border-radius: 50px;
+            background-image: url(https://www.kulturportali.gov.tr/_ui/images/nextarrow.png);
+            float: right;
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: 23px 23px;
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            margin-left: 800px;
+            margin-top: 150px;
+        }
+
+            #btnIleri:hover .btn {
+                background-size: 20px;
+            }*/
+
+        /*#btnGeri {
+            border-radius: 50px;
+            background-image: url(https://www.kulturportali.gov.tr/_ui/images/prevarrow.png);
+            float: left;
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: 20px 20px;
+            height: 60px;
+            width: 60px;
+        }*/
+    </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DNZX47R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <form method="post" action="./-aydin-sehir-merkezi" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+
+<script src="/ScriptResource.axd?d=uHIkleVeDJf4xS50Krz-yHqQQhJC2RLNr8-2fjgmuAAQf-WlIIbyP41BLlCtXnl5k4wklWhWGHcAZ_XXi7W2m4UW2eMdlqyB0EjWyd6UUGqORr1s2Af13SgPZ-aZVcHDBXjvHmvClEe5yn9LcYRL_AmWm_SIxcKqKXb-lLyVv0c1&amp;t=32e5dfca" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var PageMethods = function() {
+PageMethods.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+PageMethods.prototype = {
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return PageMethods._staticInstance.get_path();},
+FotoIdDoldurRandom:function(currentImageId,dokumanMi,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'FotoIdDoldurRandom',false,{currentImageId:currentImageId,dokumanMi:dokumanMi},succeededCallback,failedCallback,userContext); },
+FotoIdDoldur:function(etiket,hariciEtiket,BenzerMi,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'FotoIdDoldur',false,{etiket:etiket,hariciEtiket:hariciEtiket,BenzerMi:BenzerMi},succeededCallback,failedCallback,userContext); }}
+PageMethods.registerClass('PageMethods',Sys.Net.WebServiceProxy);
+PageMethods._staticInstance = new PageMethods();
+PageMethods.set_path = function(value) { PageMethods._staticInstance.set_path(value); }
+PageMethods.get_path = function() { return PageMethods._staticInstance.get_path(); }
+PageMethods.set_timeout = function(value) { PageMethods._staticInstance.set_timeout(value); }
+PageMethods.get_timeout = function() { return PageMethods._staticInstance.get_timeout(); }
+PageMethods.set_defaultUserContext = function(value) { PageMethods._staticInstance.set_defaultUserContext(value); }
+PageMethods.get_defaultUserContext = function() { return PageMethods._staticInstance.get_defaultUserContext(); }
+PageMethods.set_defaultSucceededCallback = function(value) { PageMethods._staticInstance.set_defaultSucceededCallback(value); }
+PageMethods.get_defaultSucceededCallback = function() { return PageMethods._staticInstance.get_defaultSucceededCallback(); }
+PageMethods.set_defaultFailedCallback = function(value) { PageMethods._staticInstance.set_defaultFailedCallback(value); }
+PageMethods.get_defaultFailedCallback = function() { return PageMethods._staticInstance.get_defaultFailedCallback(); }
+PageMethods.set_enableJsonp = function(value) { PageMethods._staticInstance.set_enableJsonp(value); }
+PageMethods.get_enableJsonp = function() { return PageMethods._staticInstance.get_enableJsonp(); }
+PageMethods.set_jsonpCallbackParameter = function(value) { PageMethods._staticInstance.set_jsonpCallbackParameter(value); }
+PageMethods.get_jsonpCallbackParameter = function() { return PageMethods._staticInstance.get_jsonpCallbackParameter(); }
+PageMethods.set_path("-aydin-sehir-merkezi");
+PageMethods.FotoIdDoldurRandom= function(currentImageId,dokumanMi,onSuccess,onFailed,userContext) {PageMethods._staticInstance.FotoIdDoldurRandom(currentImageId,dokumanMi,onSuccess,onFailed,userContext); }
+PageMethods.FotoIdDoldur= function(etiket,hariciEtiket,BenzerMi,onSuccess,onFailed,userContext) {PageMethods._staticInstance.FotoIdDoldur(etiket,hariciEtiket,BenzerMi,onSuccess,onFailed,userContext); }
+//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D9EDFE64" />
+        <section id="site_wrap">
+            <header class="wrapper dark_scheme" id="header" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div id="menu_wrap" class="clearfix">
+                        <div id="logo_wrap">
+                            <h1 class="sitename_logo"><a href="#" title="Medya Kütüphanesi">
+                                <img src="" /></a></h1>
+                        </div>
+                        <nav id="main_menu" class="clearfix ">
+                            <div id="stocky_menu_container" class="menu-main-container">
+                                <ul id="stocky_menu" class="menu">
+                                    <li class="menu-item hidden-menu-item"><a href="/" class="tipsyBottom" title="Portal Anasayfa"><i class="fa fa-home" style="font-size: 26px !important; line-height: 40px;"></i><span>Portal Anasayfa</span></a></li>
+                                    <li class="menu-item "><a href="/medya">Anasayfa</a></li>
+                                    <li class="menu-item current-menu-item"><a href="/medya/fotograf">Fotoğraflar</a></li>
+                                    <li class="menu-item  "><a href="/medya/video">Videolar</a></li>
+                                    <li class="menu-item "><a href="/medya/ses">Sesler</a></li>
+                                    <li class="menu-item"><a href="/medya/dokuman">Dokümanlar</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+
+            <section class="wrapper" id="content">
+                <div class="containerrr clearfix">
+                    <div id="single_product_page">
+                        <div class="post-64 type-download status-publish has-post-thumbnail hentry download_category-travel download_tag-cars download_tag-commute download_tag-snow download_tag-weather download_tag-winter edd-download edd-download-cat-travel edd-download-tag-cars edd-download-tag-commute edd-download-tag-snow edd-download-tag-weather edd-download-tag-winter">
+                            <div id="single_item_wrap" class="clearfix">
+                                <div class="posts-wrap">
+                                    <div id="product_images">
+                                        <div id="btnIleri" class="btnIleri"></div>
+                                        <div id="btnGeri" class="btnGeri"></div>
+                                        
+
+                                        
+                                        <a id="main_product_image">
+                                            <span class="preview"></span>
+                                            <img id="imgAna" src="/repoKulturPortali/Dokumanlar/AydinSehirMerkezi3_20160329155812093.jpg?format=jpg&amp;quality=50" />
+                                        </a>
+
+                                    </div>
+                                    <div id="socialmedia">
+                                        <a href="#" data-sm="fb" class="tipsyTop social-icon si-small Xsi-borderless si-rounded si-facebook" title="Facebook">
+                                            <i class="icon-facebook"></i>
+                                            <i class="icon-facebook"></i>
+                                        </a>
+                                        <a href="#" data-sm="tw" class="tipsyTop social-icon si-small Xsi-borderless si-rounded si-twitter" title="X">
+                                            <i class="icon-twitter"></i>
+                                            <i class="icon-twitter"></i>
+                                        </a>
+                                        <a href="#" data-sm="pt" data-imgurl="/repoKulturPortali/large/Dokumanlar/AydinSehirMerkezi3_20160329155812093.jpg?format=jpg&quality=50" class="tipsyTop social-icon si-small Xsi-borderless si-rounded si-pinterest" title="Pinterest">
+                                            <i class="icon-pinterest"></i>
+                                            <i class="icon-pinterest"></i>
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                                <div id="sidebar" class="container clearfix">
+                                    <div id="product_info" class="clearfix">
+                                        <div class="clearfix">
+                                            <h2>
+                                                <span id="lblFotoAdi"> Aydın Şehir Merkezi</span>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    <div id="product_pricing">
+                                        <div id="edd_purchase_64" class="edd_download_purchase_form edd_purchase_64">
+                                            <div class="edd_price_options edd_single_mode">
+                                                <ul>
+                                                    <li>
+                                                        <span class="edd_price_option_name" itemprop="description">Görsel Numarası</span>
+                                                        <p class="edd-variable-pricing-desc">
+                                                            #5827
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <span class="edd_price_option_name" itemprop="description">Görsel/Eser İli</span>
+                                                        <p class="edd-variable-pricing-desc">
+                                                            Aydın
+                                                        </p>
+                                                    </li>
+                                                    
+                                                    
+                                                    <li id="liGOrselSahibi">
+                                                        <span class="edd_price_option_name" itemprop="description">Görsel/Eser</span>
+                                                        <p class="edd-variable-pricing-desc">
+                                                            Aydın İl Kültür ve Turizm Müdürlüğü 
+                                                        </p>
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="product_meta_wrap">
+                                        
+
+                                        <div class="single-product-meta">
+                                            <span>#Anahtar Kelimeler</span>
+                                            
+                                                    <a href="/medya/fotograf/benzer/Gezilecek%20Yerler" rel="tag">Gezilecek Yerler</a>
+                                                
+                                                    <a href="/medya/fotograf/benzer/Ayd%C4%B1n" rel="tag">Aydın</a>
+                                                
+                                                    <a href="/medya/fotograf/benzer/Parklar%20-%20A%C3%A7%C4%B1k%20Alanlar" rel="tag">Parklar - Açık Alanlar</a>
+                                                
+                                                    <a href="/medya/fotograf/benzer/Turizm%20Aktiviteleri" rel="tag">Turizm Aktiviteleri</a>
+                                                
+                                                    <a href="/medya/fotograf/benzer/Ayd%C4%B1n%20%C4%B0l%20K%C3%BClt%C3%BCr%20ve%20Turizm%20M%C3%BCd%C3%BCrl%C3%BC%C4%9F%C3%BC" rel="tag">Aydın İl Kültür ve Turizm Müdürlüğü</a>
+                                                
+                                                    <a href="/medya/fotograf/benzer/%C5%9Eehir%20Foto%C4%9Fraflar%C4%B1" rel="tag">Şehir Fotoğrafları</a>
+                                                
+                                                    <a href="/medya/fotograf/benzer/%C5%9Eehir%20Merkezi" rel="tag">Şehir Merkezi</a>
+                                                
+                                        </div>
+                                        <div id="liAciklama" class="single-product-meta">
+                                            <span class="edd_price_option_name" itemprop="description">Açıklama</span>
+                                            <p class="edd-variable-pricing-desc">
+                                                
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="related_products_wrap">
+                                <div class="box_title">
+                                    <h3>İLGİLİ GÖRSELLER</h3>
+                                </div>
+                                <div class="related_products clearfix">
+                                    
+                                            <div class="single_related">
+                                                <a href="/medya/fotograf/fotodokuman/4623/ongozlu-kopru" title="Ongözlü Köprü">
+                                                    <img width="150" height="150" src="/repoKulturPortali/small/Dokumanlar/Ongozlukopru_20160223102037704.jpg?format=jpg&quality=50" />
+                                                </a>
+                                            </div>
+                                        
+                                            <div class="single_related">
+                                                <a href="/medya/fotograf/fotodokuman/6531/kilis-evi" title="Kilis Evi">
+                                                    <img width="150" height="150" src="/repoKulturPortali/small/Dokumanlar/12KilisEvi_20170306103523649.jpg?format=jpg&quality=50" />
+                                                </a>
+                                            </div>
+                                        
+                                            <div class="single_related">
+                                                <a href="/medya/fotograf/fotodokuman/4809/mersin-aydincik" title="Mersin Aydıncık">
+                                                    <img width="150" height="150" src="/repoKulturPortali/small/Dokumanlar/Aydincik_MersinFotograf_AhmetGullu2_20160226141822191.JPG?format=jpg&quality=50" />
+                                                </a>
+                                            </div>
+                                        
+                                            <div class="single_related">
+                                                <a href="/medya/fotograf/fotodokuman/4705/anadolu-universitesi-havacilik-parki" title="Anadolu Üniversitesi Havacılık Parkı">
+                                                    <img width="150" height="150" src="/repoKulturPortali/small/Dokumanlar/DSC_0278_20160224110558008.jpg?format=jpg&quality=50" />
+                                                </a>
+                                            </div>
+                                        
+                                            <div class="single_related">
+                                                <a href="/medya/fotograf/fotodokuman/6751/beyoglu" title="Beyoğlu">
+                                                    <img width="150" height="150" src="/repoKulturPortali/small/Dokumanlar/402_20170317103603674.jpg?format=jpg&quality=50" />
+                                                </a>
+                                            </div>
+                                        
+                                            <div class="single_related">
+                                                <a href="/medya/fotograf/fotodokuman/8155/osmaniye-kent-muzesi" title="Osmaniye Kent Müzesi">
+                                                    <img width="150" height="150" src="/repoKulturPortali/small/Dokumanlar/alimuratcorukosmaniyekentmuzesi01DSC_4073_20170809092923548.jpg?format=jpg&quality=50" />
+                                                </a>
+                                            </div>
+                                        
+                                            <div class="single_related">
+                                                <a href="/medya/fotograf/fotodokuman/5362/germir-evleri" title="Germir Evleri">
+                                                    <img width="150" height="150" src="/repoKulturPortali/small/Dokumanlar/DSCF6164_20160311141349792.JPG?format=jpg&quality=50" />
+                                                </a>
+                                            </div>
+                                        
+                                            <div class="single_related">
+                                                <a href="/medya/fotograf/fotodokuman/4973/atkaracalarhosislamlar-turbesi" title="Atkaracalar-Hoşislamlar Türbesi">
+                                                    <img width="150" height="150" src="/repoKulturPortali/small/Dokumanlar/0101AtkaracalarHosislamlarTurbesi_20160302153710230.jpg?format=jpg&quality=50" />
+                                                </a>
+                                            </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </section>
+
+            <footer id="footer" class="wrapper">
+                  
+<div class="container clearfix">
+    <div id="post_footer">
+        <div id="socnets_wrap">
+            <div id="socnets">
+                <a href="https://www.facebook.com/kulturportali/" class="tipsyTop" target="_blank" title="Facebook"><i class="icon-facebook"></i></a>
+                <a href="https://twitter.com/tckulturportali" class="tipsyTop" target="_blank" title="X"><i class="icon-twitter"></i></a>
+                <a href="https://www.instagram.com/kulturportali/" class="tipsyTop" target="_blank" title="Instagram"><i class="icon-instagram"></i></a>
+                <a href="https://www.pinterest.com/KulturPortali" class="tipsyTop" target="_blank" title="Pinterest"><i class="icon-pinterest"></i></a>
+                
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="footer_copy">
+            &copy; 2025 Kültür Portalı - Tüm hakları saklıdır.
+        </div>
+    </div>
+</div>
+
+
+            </footer>
+        </section>
+        <script type='text/javascript' src='/Mk/js/masonry.min.js'></script>
+        <script type='text/javascript' src='/Mk/js/jquery/jquery.masonry.min.js'></script>
+        <script type='text/javascript' src='/Mk/js/comment-reply.min.js'></script>
+        <script type='text/javascript' src='/Mk/js/edd-wl.min.js'></script>
+        <script type='text/javascript' src='/Mk/js/modal.min.js'></script>
+        <div class="modal fade" id="edd-wl-modal" tabindex="-1" role="dialog" aria-labelledby="edd-wl-modal-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">    
+            PageMethods.set_path("/Mk/FotoDetay.aspx");
+            var hariciEtiket;
+            var etiket;
+            var imageLength;
+            var indexOfImage;
+            var validNavigation = true;
+            jQuery(document).ready(function () {
+                jQuery("body").on("contextmenu", function () {
+                    return false;
+                });
+
+                $(window).resize(function () {
+                    $("#imgAna")
+                        .css("max-height",
+                            window.innerHeight - $("#product_images").position().top - $("#socialmedia").height() - 50);
+                }).trigger("resize");
+                if (localStorage.getItem("resimIdList") == null) {
+                    if (document.referrer.indexOf("arama") > -1 || document.referrer.indexOf("benzer") > -1 || document.referrer.indexOf("similar") > -1 || document.referrer.indexOf("search") > -1) {
+                        etiket = decodeURIComponent(document.referrer.split('/')[6]).replace(/\+/g, ' ');
+                        localStorage.setItem("currentEtiket", etiket);
+                        hariciEtiket = document.referrer.indexOf("hariciEtiket") > -1 ? document.referrer.split('?')[1].split('=')[1] : "";
+                        FotoDetayIdDoldur(etiket, hariciEtiket, (document.referrer.indexOf("benzer") > -1 || document.referrer.indexOf("similar") > -1), location.pathname.split('/')[4])
+                    }
+                    else {
+                        localStorage.clear();
+                        FotoDetayIdDoldurRandom(location.pathname.split('/')[4], (location.href.indexOf("fotodokuman") > -1 || location.href.indexOf("photo-document") > -1))
+                    }
+                }
+                else {
+                    if (document.referrer.indexOf("arama") > -1 || document.referrer.indexOf("benzer") > -1 || document.referrer.indexOf("similar") > -1 || document.referrer.indexOf("search") > -1) {
+                        etiket = decodeURIComponent(document.referrer.split('/')[6]).replace(/\+/g, ' ');
+                        if (etiket != localStorage.getItem("currentEtiket")) {
+                            localStorage.setItem("currentEtiket", etiket);
+                            hariciEtiket = document.referrer.indexOf("hariciEtiket") > -1 ? document.referrer.split('?')[1].split('=')[1] : "";
+                            FotoDetayIdDoldur(etiket, hariciEtiket, (document.referrer.indexOf("benzer") > -1 || document.referrer.indexOf("similar") > -1), location.pathname.split('/')[4])
+                        }
+                    }
+                    else {
+                        if (!(document.referrer.indexOf("fotodokuman") > -1 || document.referrer.indexOf("fotodetay") > -1 || document.referrer.indexOf("photo-detail") > -1 || document.referrer.indexOf("photo-document") > -1)) {
+                            localStorage.clear();
+                            FotoDetayIdDoldurRandom(location.pathname.split('/')[4], (location.href.indexOf("fotodokuman") > -1 || location.href.indexOf("photo-document") > -1))
+                        }
+                        else {
+                            SetImageIndex(location.pathname.split('/')[4])
+                            if (localStorage.getItem("ImageIndex") == "undefined") {
+                                $("#btnIleri").hide();
+                                $("#btnGeri").hide();
+                                localStorage.clear();
+                            }
+                            else {
+                                $("#btnIleri").show();
+                                $("#btnGeri").show();
+                            }
+                        }
+                    }
+                }
+            });
+            //$(window).unload(function () {
+            //    if (validNavigation) {
+            //        localStorage.clear();
+            //    }
+            //});
+            //$(document).on('keypress', function (e) {
+            //    if (e.keyCode == 116) {
+            //        validNavigation = false;
+            //    }
+            //});
+
+            $(document).on("click", "a", function () {
+                if ($(this).attr("rel") == "tag") {
+                    localStorage.clear();
+                }
+            });
+
+            //$(document).bind("click", "button[type=button]", function () {
+            //    validNavigation = false;
+            //});
+            $("#btnIleri").on("click", function () {
+                SetImageIndex(location.pathname.split('/')[4])
+                if (localStorage.getItem("ImageIndex") == "undefined") {
+                    $("#btnIleri").hide();
+                    $("#btnGeri").hide();
+                    localStorage.clear();
+                }
+                var setUrl;
+                var JsonObje = JSON.parse(localStorage.getItem("resimIdList"));
+                var ImageId = JsonObje.length - 1 == localStorage.getItem("ImageIndex") ? JsonObje[0].Url.split('-')[1] : JsonObje[parseInt(localStorage.getItem("ImageIndex")) + 1].Url.split('-')[1];
+                var ImageTitle = JsonObje.length - 1 == localStorage.getItem("ImageIndex") ? JsonObje[0].Url.split('-')[2] : JsonObje[parseInt(localStorage.getItem("ImageIndex")) + 1].Url.split('-')[2];
+                if (JsonObje.length - 1 == localStorage.getItem("ImageIndex") ? JsonObje[0].Url.split('-')[0].indexOf("fotoDokuman") > -1 : JsonObje[parseInt(localStorage.getItem("ImageIndex")) + 1].Url.split('-')[0].indexOf("fotoDokuman") > -1) {
+                    if (location.pathname.split('/')[1] == "medya") {
+                        setUrl = location.origin + "/medya/fotograf/fotodokuman/" + ImageId + "/" + ImageTitle;
+                    }
+                    else {
+                        setUrl = location.origin + "/media/photo/photo-document/" + ImageId + "/" + ImageTitle;
+                    }
+
+                }
+                if (JsonObje.length - 1 == localStorage.getItem("ImageIndex") ? JsonObje[0].Url.split('-')[0].indexOf("FotoDetay") > -1 : JsonObje[parseInt(localStorage.getItem("ImageIndex")) + 1].Url.split('-')[0].indexOf("FotoDetay") > -1) {
+                    if (location.pathname.split('/')[1] == "medya") {
+                        setUrl = location.origin + "/medya/fotograf/fotodetay/" + ImageId + "/" + ImageTitle;
+                    }
+                    else {
+                        setUrl = location.origin + "/media/photo/photo-detail/" + ImageId + "/" + ImageTitle;
+                    }
+                }
+                if (JsonObje.length - 1 == localStorage.getItem("ImageIndex")) {
+                    localStorage.setItem("ImageIndex", 0)
+                }
+                else {
+                    localStorage.setItem("ImageIndex", parseInt(localStorage.getItem("ImageIndex")) + 1)
+                }
+                location.href = setUrl;
+            });
+            $("#btnGeri").on("click", function () {
+                SetImageIndex(location.pathname.split('/')[4])
+                if (localStorage.getItem("ImageIndex") == "undefined") {
+                    $("#btnIleri").hide();
+                    $("#btnGeri").hide();
+                    localStorage.clear();
+                }
+                var setUrl;
+                var JsonObje = JSON.parse(localStorage.getItem("resimIdList"));
+                var ImageId = localStorage.getItem("ImageIndex") == 0 ? JsonObje[JsonObje.length - 1].Url.split('-')[1] : JsonObje[localStorage.getItem("ImageIndex") - 1].Url.split('-')[1];
+                var ImageTitle = localStorage.getItem("ImageIndex") == 0 ? JsonObje[JsonObje.length - 1].Url.split('-')[2] : JsonObje[localStorage.getItem("ImageIndex") - 1].Url.split('-')[2];
+                if (localStorage.getItem("ImageIndex") == 0 ? JsonObje[JsonObje.length - 1].Url.split('-')[0].indexOf("fotoDokuman") > -1 : JsonObje[localStorage.getItem("ImageIndex") - 1].Url.split('-')[0].indexOf("fotoDokuman") > -1) {
+                    if (location.pathname.split('/')[1] == "medya") {
+                        setUrl = location.origin + "/medya/fotograf/fotodokuman/" + ImageId + "/" + ImageTitle;
+                    }
+                    else {
+                        setUrl = location.origin + "/media/photo/photo-document/" + ImageId + "/" + ImageTitle;
+                    }
+                }
+                if (localStorage.getItem("ImageIndex") == 0 ? JsonObje[JsonObje.length - 1].Url.split('-')[0].indexOf("FotoDetay") > -1 : JsonObje[localStorage.getItem("ImageIndex") - 1].Url.split('-')[0].indexOf("FotoDetay") > -1) {
+                    if (location.pathname.split('/')[1] == "medya") {
+                        setUrl = location.origin + "/medya/fotograf/fotodetay/" + ImageId + "/" + ImageTitle;
+                    }
+                    else {
+                        setUrl = location.origin + "/media/photo/photo-detail/" + ImageId + "/" + ImageTitle;
+                    }
+                }
+                if (localStorage.getItem("ImageIndex") == 0) {
+                    localStorage.setItem("ImageIndex", JsonObje.length - 1)
+                }
+                else {
+                    localStorage.setItem("ImageIndex", localStorage.getItem("ImageIndex") - 1)
+                }
+                location.href = setUrl;
+            });
+
+
+            function FotoDetayIdDoldur(etiket, hariciEtiket, benzerMi, currentImageId) {
+
+                function osss(aa) {
+                    var JsonObje = JSON.parse(aa);
+                    imageLength = JsonObje.length;
+                    $.each(JsonObje, function (i, el) {
+                        if (el.Url.split('-')[1] == currentImageId) {
+                            indexOfImage = i;
+                        }
+                    });
+                    localStorage.setItem("resimIdList", aa);
+                    localStorage.setItem("ImageIndex", indexOfImage)
+                }
+                function oeee() {
+
+                }
+                PageMethods.FotoIdDoldur(etiket, hariciEtiket, benzerMi, osss, oeee);
+            }
+            function FotoDetayIdDoldurRandom(currentImageId, DokumanMi) {
+
+                function osss(aa) {
+                    var JsonObje = JSON.parse(aa);
+                    imageLength = JsonObje.length;
+                    $.each(JsonObje, function (i, el) {
+                        if (el.Url.split('-')[1] == currentImageId) {
+                            indexOfImage = i;
+                        }
+                    });
+                    localStorage.setItem("resimIdList", aa);
+                    localStorage.setItem("ImageIndex", indexOfImage)
+                }
+                function oeee() {
+
+                }
+                PageMethods.FotoIdDoldurRandom(currentImageId, DokumanMi, osss, oeee);
+            }
+            function SetImageIndex(currentImageId) {
+                var JsonObje = JSON.parse(localStorage.getItem("resimIdList"));
+                imageLength = JsonObje.length;
+                $.each(JsonObje, function (i, el) {
+                    if (el.Url.split('-')[1] == currentImageId) {
+                        indexOfImage = i;
+                    }
+                });
+                localStorage.setItem("ImageIndex", indexOfImage)
+            }
+        </script>
+    </form>
+</body>
+</html>

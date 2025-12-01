@@ -1,0 +1,504 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAN</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>        
+        /* Genel Stil AyarlarÄ± */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6; /* AÃ§Ä±k gri arka plan */
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        h1{ text-align: center; }
+        h2{ text-align: center; }
+        h3{ text-align: center; }
+        
+        /* Tema Rengi: Derin Turkuaz (Van GÃ¶lÃ¼ TemasÄ±) */
+        :root {
+            --primary-color: #008080; /* Teal */
+            --secondary-color: #00A3A3; /* Lighter Teal */
+        }
+        
+        /* 1. ÃœST MENÃœ STÄ°LLERÄ° */
+        .ust-menu-alani {
+            background-color: var(--primary-color); 
+            color: white;
+            padding: 15px 5%; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo { font-size: 24px; font-weight: bold; letter-spacing: 1px; }
+        
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            margin-left: 5px;
+            border: 1px solid transparent;
+            transition: all 0.3s;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .menu a i { margin-right: 5px; }
+
+        .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: white;
+        }
+        
+        /* 2. ORTALANMIÅ RESÄ°M ve HÄ°ZALI METÄ°N ALANI STÄ°LLERÄ° */
+        main {
+            padding: 40px 20px;
+            display: block;
+        }
+        
+        .content-area {
+            width: 90%; 
+            max-width: 1000px; 
+            margin: 0 auto 40px auto;
+            padding: 20px;
+            background-color: white; 
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        .image-wrapper {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 320px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-content {
+            padding-top: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .text-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        /* 4. HIZLI ERÄ°ÅÄ°M BUTONLARI STÄ°LLERÄ° */
+        .quick-links {
+            margin-top: 20px; 
+            padding: 5px 0;
+            border-radius: 3px;
+            text-align: center;
+        }
+        
+        .quick-links h3 {
+            color: var(--primary-color); 
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #eee;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .links-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap; 
+            gap: 15px; 
+            padding: 0 10px;
+        }
+
+        .link-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            flex-basis: calc(25% - 15px); 
+            min-width: 100px; 
+            padding: 15px 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: white; 
+            border: 1px solid #ffffff;
+        }
+
+        .link-item i {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: var(--primary-color); 
+        }
+        
+        .link-item span {
+            font-size: 14px;
+        }
+
+        .link-item:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .link-item:hover i {
+            color: white; 
+        }
+        
+        /* 5. BLOK GRÄ°D STÄ°LLERÄ° (Gezi, Restoran, KuafÃ¶r) */
+        .destinations-grid, .restoran-grid, .kuafÃ¶r-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 eÅŸit sÃ¼tun */
+            gap: 20px; /* Bloklar arasÄ± boÅŸluk */
+            margin-top: 20px;
+            padding: 20px;
+            border-top: 1px solid #eee; /* AyÄ±rÄ±cÄ± */
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        /* Yeni gridler iÃ§in Ã¼stten boÅŸluk */
+        .restoran-grid, .kuafÃ¶r-grid {
+            margin-top: 30px; 
+            border-top: 1px solid #ccc;
+        }
+
+        .destination-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Resim AlanÄ± Stilleri */
+        .card-image {
+            width: 100%;
+            height: 260px; /* Resim YÃ¼ksekliÄŸi */
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            display: block;
+        }
+
+        .card-content {
+            padding: 10px 15px;
+            text-align: left;
+        }
+
+        .card-content h4 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* AÃ§Ä±klama ve Butonun Yan Yana Gelmesi Ä°Ã§in Flex YapÄ± */
+        .description-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Ã–ÄŸeleri dikeyde ortala */
+            gap: 10px;
+        }
+        
+        .description-flex p {
+            margin: 0;
+            font-size: 15px; 
+            color: #666;
+            flex-grow: 1; /* Metnin kalan alanÄ± doldurmasÄ±nÄ± saÄŸla */
+        }
+        
+        /* BUTON STÄ°LÄ° */
+        .git-button {
+            background-color: var(--primary-color); 
+            color: white;
+            border: none;
+            padding: 7px 14px; 
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px; 
+            transition: background-color 0.3s;
+            white-space: nowrap; 
+        }
+        
+        .git-button:hover {
+            background-color: var(--secondary-color); 
+        }
+
+
+        /* KÃ¼Ã§Ã¼k ekranlar (DuyarlÄ± TasarÄ±m) */
+        @media (max-width: 768px) {
+            .ust-menu-alani {
+                flex-direction: column; 
+                padding: 15px 20px;
+            }
+            .links-container {
+                justify-content: center;
+            }
+            .link-item {
+                flex-basis: calc(50% - 15px);
+                margin-bottom: 10px;
+            }
+            .destinations-grid, .restoran-grid, .kuafÃ¶r-grid {
+                grid-template-columns: 1fr; /* Tek sÃ¼tun */
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="ust-menu-alani">
+        <div class="logo"><img src="images/logo.png" alt="logo goruntÃ¼lenmiyor" style="width: 100px;"></div>
+        <nav class="menu">
+            <a href="https://www.obilet.com/otobus-bileti/van" target="_blank"><i class="fas fa-bus"></i> OtobÃ¼s </a>
+            <a href="https://www.trivago.com.tr/tr/s?q=otel+van" target="_blank"><i class="fas fa-bed"></i> Konaklama</a>
+            <a href="https://www.obilet.com/ucak-bileti/van" target="_blank"><i class="fas fa-plane"></i> UÃ§uÅŸ (Van Ferit Melen HavalimanÄ±)</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        
+        <div class="content-area">
+            <h1 style="text-align: center;"><b>Van</b></h1>
+            
+            <div class="image-wrapper"> 
+                <img src="images/akdamar_adasi.jpg" style="width: 650px;" alt="Akdamar AdasÄ± ve Van GÃ¶lÃ¼ manzarasÄ±">
+            </div>
+            
+            <div class="text-content">
+                <H2><b>(65)HakkÄ±nda - Tarihi Kale ve Van GÃ¶lÃ¼</b></H2>
+                <p><b>
+                DoÄŸu Anadolu'nun en bÃ¼yÃ¼k ve Ã¶nemli merkezlerinden biri olan Van, bÃ¶lgenin en bÃ¼yÃ¼k gÃ¶lÃ¼ olan Van GÃ¶lÃ¼'ne kÄ±yÄ±sÄ± ile Ã¼nlÃ¼dÃ¼r. Urartu KrallÄ±ÄŸÄ±'na baÅŸkentlik yapmÄ±ÅŸ kadim bir ÅŸehir olan Van'Ä±n en Ã¶nemli tarihi simgeleri **Van Kalesi** ve gÃ¶l iÃ§erisindeki **Akdamar AdasÄ±**'dÄ±r.<br>
+                Åehir, tÃ¼m dÃ¼nyada Ã¼n salmÄ±ÅŸ zengin ve uzun soluklu **Van KahvaltÄ±sÄ±** ile gastronomi alanÄ±nda Ã¶ne Ã§Ä±kar. AyrÄ±ca, farklÄ± renkte gÃ¶zlere sahip meÅŸhur **Van Kedisi** de ÅŸehrin sembollerindendir.
+                </b>
+                </p>
+                
+                <div class="quick-links">
+                    <h3>HÄ±zlÄ± EriÅŸim BaÄŸlantÄ±larÄ±</h3>
+                    <div class="links-container">
+                        <a href="#" class="link-item">
+                            <i class="fas fa-utensils"></i>
+                            <span>Restorant</span>
+                        </a>
+                        <a href="#" class="link-item">
+                            <i class="fas fa-landmark"></i>
+                            <span>Tarih/Gezi</span>
+                        </a>
+                        <a href="#" class="link-item">
+                            <i class="fas fa-cut"></i>
+                            <span>KuafÃ¶r</span>
+                        </a>
+                    </div>
+                    
+                    <h2 style="margin-top: 20px; margin-bottom: 20px; padding-top: 20px; border-bottom: 2px solid #eee;">Gezi Ve Tarih</h2>
+                    
+                    <div class="destinations-grid">
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="images/akdamar_kilisesi.jpg" alt="Akdamar AdasÄ± ve Kilisesi">
+                            </div>
+                            <div class="card-content">
+                                <h4>Akdamar AdasÄ± ve Kilisesi</h4>
+                                <div class="description-flex">
+                                    <p>Van GÃ¶lÃ¼'ndeki Tarihi Ermeni Kutsal HaÃ§ Kilisesi</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M181', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="images/van_kalesi.jpg" alt="Van Kalesi">
+                            </div>
+                            <div class="card-content">
+                                <h4>Van Kalesi (Urartu DÃ¶nemi)</h4>
+                                <div class="description-flex">
+                                    <p>Åehre Hakim, Urartular'dan Kalan BÃ¼yÃ¼k Kale</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M182', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="images/muradiye_selalesi.jpg" alt="Muradiye Åelalesi">
+                            </div>
+                            <div class="card-content">
+                                <h4>Muradiye Åelalesi</h4>
+                                <div class="description-flex">
+                                    <p>BÃ¼yÃ¼k ve Heybetli Bir DoÄŸal GÃ¼zellik</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M183', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="images/van_kedisi.jpg" alt="Van Kedisi Evi">
+                            </div>
+                            <div class="card-content">
+                                <h4>Van Kedisi Evi (Kedi VillasÄ±)</h4>
+                                <div class="description-flex">
+                                    <p>FarklÄ± GÃ¶z Renkleriyle ÃœnlÃ¼ Kedilerin YaÅŸam AlanÄ±</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M184', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <h2 style="margin-top: 40px; margin-bottom: 20px; padding-top: 20px; border-bottom: 2px solid #eee;">PopÃ¼ler Restoran ve YÃ¶resel Lezzetler</h2>
+                    
+                    <div class="restoran-grid">
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="images/sutcu_fevzi.jpg" alt="SÃ¼tÃ§Ã¼ Fevzi">
+                            </div>
+                            <div class="card-content">
+                                <h4>SÃ¼tÃ§Ã¼ Fevzi KahvaltÄ± Salonu</h4>
+                                <div class="description-flex">
+                                    <p>Van KahvaltÄ±sÄ± Deneyimi Ä°Ã§in En Ä°yi Adreslerden Biri</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M185', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="images/bak_hele_bak.jpg" alt="Bak Hele Bak KahvaltÄ± Salonu">
+                            </div>
+                            <div class="card-content">
+                                <h4>Bak Hele Bak KahvaltÄ± Salonu</h4>
+                                <div class="description-flex">
+                                    <p>MeÅŸhur Van KahvaltÄ±sÄ±'nÄ±n PopÃ¼ler ve Zengin Adresi</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M186', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="images/inci_kefali.jpg" alt="Van BalÄ±kÃ§Ä±lÄ±k Tesisleri">
+                            </div>
+                            <div class="card-content">
+                                <h4>Ä°nci Kefali Restoran</h4>
+                                <div class="description-flex">
+                                    <p>Van GÃ¶lÃ¼'ne Ã–zgÃ¼ BalÄ±k Ä°nci Kefali'ni TadabileceÄŸiniz Yer</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M187', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="images/halil_ibrahim.jpg" alt="Halil Ä°brahim SofrasÄ±">
+                            </div>
+                            <div class="card-content">
+                                <h4>Halil Ä°brahim SofrasÄ±</h4>
+                                <div class="description-flex">
+                                    <p>Geleneksel Van MutfaÄŸÄ± ve YÃ¶resel Yemekler</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M188', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    <h2 style="margin-top: 40px; margin-bottom: 20px; padding-top: 20px; border-bottom: 2px solid #eee;">PopÃ¼ler KuafÃ¶r ve GÃ¼zellik SalonlarÄ±</h2>
+                    
+                    <div class="kuafÃ¶r-grid">
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="images/kuafor_murat_van.jpg" alt="KuafÃ¶r Murat">
+                            </div>
+                            <div class="card-content">
+                                <h4>KuafÃ¶r Murat (Erkek)</h4>
+                                <div class="description-flex">
+                                    <p>Åehir Merkezinde YÃ¼ksek PuanlÄ± Erkek KuafÃ¶rÃ¼</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M189', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="images/lale_kuafor.jpg" alt="Lale Bayan KuafÃ¶rÃ¼">
+                            </div>
+                            <div class="card-content">
+                                <h4>Lale Bayan KuafÃ¶rÃ¼</h4>
+                                <div class="description-flex">
+                                    <p>SaÃ§ Kesim, Boya ve Gelin SaÃ§Ä± Hizmetleri</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M190', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="images/van_erkegi.jpg" alt="Van ErkeÄŸi KuafÃ¶r">
+                            </div>
+                            <div class="card-content">
+                                <h4>Van ErkeÄŸi KuafÃ¶r (Erkek)</h4>
+                                <div class="description-flex">
+                                    <p>Klasik ve Modern SaÃ§ ve Sakal TasarÄ±m Hizmetleri</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M191', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="destination-card">
+                            <div class="card-image">
+                                <img src="images/gol_guzellik.jpg" alt="GÃ¶l GÃ¼zellik Salonu">
+                            </div>
+                            <div class="card-content">
+                                <h4>GÃ¶l GÃ¼zellik Salonu (Bayan)</h4>
+                                <div class="description-flex">
+                                    <p>Merkezde Cilt ve VÃ¼cut BakÄ±m UygulamalarÄ±</p>
+                                    <button class="git-button" onclick="window.open('http://googleusercontent.com/maps.google.com/M192', '_blank')">Ziyaret Et</button>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    </div>
+            </div>
+        </div>
+        
+    </main>
+
+</body>
+</html>
