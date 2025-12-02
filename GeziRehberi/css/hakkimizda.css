@@ -1,0 +1,134 @@
+/* Sadece Ekip Sayfasına Özel Stiller */
+
+/* Ana Kapsayıcı */
+.about-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.about-container h1 {
+    font-size: 38px;
+    color: #228B22; 
+    margin-bottom: 20px;
+    border-bottom: 3px solid #f7f7f7;
+    padding-bottom: 10px;
+}
+
+.mission-statement {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ekip Bölümü */
+.team-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.team-section h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.team-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Kişi Kartı */
+.team-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    padding: 25px;
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    border-color: #228B22;
+}
+
+/* Yuvarlak Fotoğraf */
+.member-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 4px solid #228B22;
+    padding: 3px;
+    background: white;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Yazılar */
+.team-card h3 {
+    font-size: 22px;
+    color: #333;
+    margin: 15px 0 5px 0;
+    font-weight: 700;
+}
+
+.team-card p.role {
+    font-size: 16px;
+    color: #228B22;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-card p.bio {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Toplu Fotoğraf */
+.group-photo {
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobil Uyum */
+@media (max-width: 768px) {
+    .team-cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .team-card {
+        width: 100%;
+    }
+    .about-container {
+        width: 95%;
+        padding: 20px;
+    }
+}
