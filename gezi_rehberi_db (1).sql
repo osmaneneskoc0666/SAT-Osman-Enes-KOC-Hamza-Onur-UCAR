@@ -22,7 +22,18 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
-
+-- Sizin Rotanız tablosunu oluşturuyoruz
+CREATE TABLE `sizin_rotaniz` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `baslik` varchar(255) NOT NULL,
+  `ozet` text DEFAULT NULL,
+  `icerik` longtext NOT NULL,
+  `resim_url` varchar(255) DEFAULT NULL,
+  `gonderen_isim` varchar(100) DEFAULT 'Anonim',
+  `tarih` datetime DEFAULT current_timestamp(),
+  `onay_durumu` enum('onay_bekliyor','onaylandi','reddedildi') DEFAULT 'onay_bekliyor',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 --
 -- Tablo için tablo yapısı `blog`
 --
