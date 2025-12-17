@@ -13,7 +13,8 @@
 Projenin karşılama ekranı ve kullanıcıların etkileşime girdiği sayfalar.
 
 <div align="center">
-  ![image_2 png](https://github.com/user-attachments/assets/f824e6f7-040e-46e0-914c-4d97b218ead0 )
+  <img width="1901" height="921" alt="image_2 png.jpg" src="https://github.com/user-attachments/assets/fc936338-4148-447b-aca9-bbcbb05c8028" />
+
   <br>
 
   <img width="1901" height="921" alt="image_0 png" src="https://github.com/user-attachments/assets/fc936338-4148-447b-aca9-bbcbb05c8028" />
