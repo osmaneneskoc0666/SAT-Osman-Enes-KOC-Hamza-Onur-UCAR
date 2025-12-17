@@ -13,19 +13,19 @@
 Projenin karşılama ekranı ve kullanıcıların etkileşime girdiği sayfalar.
 
 <div align="center">
-  <img src="screenshots/image_2.png.jpg" alt="Gezi Rehberi Ana Sayfa" width="90%" style="margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;">
+  <img src="image_2.png.jpg" alt="Gezi Rehberi Ana Sayfa" width="90%" style="margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;">
   
   <br>
 
-  <img src="screenshots/image_0.png" alt="Ankara Şehir Detay Sayfası" width="45%" style="margin-right: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;">
-  <img src="screenshots/image_1.png" alt="Blog Yazısı Gönder Formu" width="45%" style="margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;">
+  <img src="image_0.png" alt="Ankara Şehir Detay Sayfası" width="45%" style="margin-right: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;">
+  <img src="image_1.png" alt="Blog Yazısı Gönder Formu" width="45%" style="margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;">
 </div>
 
 ⚙️ Yönetici (Admin) Paneli
 Site içeriğinin, şehirlerin ve kullanıcıların yönetildiği kontrol merkezi.
 
 <div align="center">
-  <img src="screenshots/image_3.png" alt="Admin Paneli Dashboard ve Veri Girişi" width="90%" style="border: 1px solid #ddd; border-radius: 5px;">
+  <img src="image_3.png" alt="Admin Paneli Dashboard ve Veri Girişi" width="90%" style="border: 1px solid #ddd; border-radius: 5px;">
 </div>
 
 
