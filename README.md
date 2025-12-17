@@ -1,4 +1,5 @@
-<img width="1901" height="921" alt="ekran alıntısı png" src="https://github.com/user-attachments/assets/fc936338-4148-447b-aca9-bbcbb05c8028" />🌍 Gezi Rehberi - Web Tabanlı Seyahat ve Blog Platformu
+🌍 Gezi Rehberi - Web Tabanlı Seyahat ve Blog Platformu
+<img width="1903" height="921" alt="Ekran Alıntısı" src="https://github.com/user-attachments/assets/2cae271e-1728-4aa1-afef-d81988525b1e" />
 
 
 ![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)
