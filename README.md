@@ -1,4 +1,5 @@
-<img width="1901" height="921" alt="image_0 png" src="https://github.com/user-attachments/assets/d205c92b-f1b6-4b22-983d-4eab5d226e3c" />🌍 Gezi Rehberi - Web Tabanlı Seyahat ve Blog Platformu
+<img width="1901" height="921" alt="ekran alıntısı png" src="https://github.com/user-attachments/assets/fc936338-4148-447b-aca9-bbcbb05c8028" />🌍 Gezi Rehberi - Web Tabanlı Seyahat ve Blog Platformu
+
 
 ![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
@@ -11,12 +12,7 @@
 Projenin karşılama ekranı ve kullanıcıların etkileşime girdiği sayfalar.
 
 <div align="center">
-  <img width="1901" height="921" alt="image_2.png.jpg" src="https://github.com/user-attachments/assets/fc936338-4148-447b-aca9-bbcbb05c8028" />
-
-  <br>
-
-  <img width="1901" height="921" alt="image_0 png" src="https://github.com/user-attachments/assets/fc936338-4148-447b-aca9-bbcbb05c8028" />
-
+<img width="1901" height="921" alt="image_0 png" src="https://github.com/user-attachments/assets/fc936338-4148-447b-aca9-bbcbb05c8028" />
 <img width="1902" height="920" alt="image_1 png" src="https://github.com/user-attachments/assets/8717c927-9fff-4a3e-a85b-ac5f7281e975" />
 
 
