@@ -1,79 +1,69 @@
 🌍 Gezi Rehberi - Web Tabanlı Seyahat ve Blog Platformu
-Bu proje, kullanıcıların şehirleri keşfedebileceği, gezi yazılarını okuyabileceği ve kendi deneyimlerini paylaşabileceği dinamik bir web uygulamasıdır. PHP ve MySQL kullanılarak geliştirilmiştir.
-![gezi1](https://github.com/user-attachments/assets/248ab47f-6b6d-406a-bd9e-086c3d52805a)
-![gezi2](https://github.com/user-attachments/assets/586ce4a8-df09-4390-9701-164ebb0e00d0)
-![gezi3](https://github.com/user-attachments/assets/f68be00a-ef4a-422c-99c9-4c0ad09c13cc)
 
-📋 Proje Hakkında
-Gezi Rehberi, gezginler için dijital bir kılavuz niteliğindedir. Kullanıcılar şehir detaylarına ulaşabilir, blog yazılarını inceleyebilir ve sisteme üye olarak etkileşimde bulunabilirler. Yönetici (Admin) paneli üzerinden tüm içerik ve kullanıcı hareketleri kontrol edilebilir.
+![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-🚀 Özellikler
+> Bu proje, üniversite bitirme ödevi kapsamında geliştirilmiş dinamik bir seyahat ve blog yönetim sistemidir.
+
+📷 Projeden Görüntüler
+
+🏠 Ana Sayfa ve Kullanıcı Arayüzü
+Projenin karşılama ekranı ve kullanıcıların etkileşime girdiği sayfalar.
+
+<div align="center">
+  <img src="screenshots/image_2.png.jpg" alt="Gezi Rehberi Ana Sayfa" width="90%" style="margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;">
+  
+  <br>
+
+  <img src="screenshots/image_0.png" alt="Ankara Şehir Detay Sayfası" width="45%" style="margin-right: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;">
+  <img src="screenshots/image_1.png" alt="Blog Yazısı Gönder Formu" width="45%" style="margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;">
+</div>
+
+⚙️ Yönetici (Admin) Paneli
+Site içeriğinin, şehirlerin ve kullanıcıların yönetildiği kontrol merkezi.
+
+<div align="center">
+  <img src="screenshots/image_3.png" alt="Admin Paneli Dashboard ve Veri Girişi" width="90%" style="border: 1px solid #ddd; border-radius: 5px;">
+</div>
+
+
+
+📖 Proje Hakkında
+
+Gezi Rehberi, kullanıcıların şehirleri keşfedebileceği, seyahat yazılarını okuyabileceği ve kendi deneyimlerini paylaşabileceği bir web uygulamasıdır. Klasik bir blog sitesinden farklı olarak, şehir bazlı içerik filtreleme ve yönetici onaylı içerik sistemi barındırır.
+
+
+🚀 Öne Çıkan Özellikler
+
 👤 Kullanıcı Arayüzü (Front-End)
-Şehir Rehberi: Türkiye'deki şehirlerin tanıtımı, gezilecek yerler ve detaylı bilgiler.
-
-Blog Sistemi: Kullanıcıların gezi yazılarını okuyabileceği ve kendi yazılarını gönderebileceği alan.
-
-Üyelik Sistemi: Kayıt ol, Giriş yap ve Çıkış yap fonksiyonları.
-
-Yorum Yapma: Mekanlara ve yazılara yorum/puan bırakma özelliği.
+Şehir Rehberi: Türkiye'deki şehirler için özel sayfalar, kapak fotoğrafları ve detaylı açıklamalar.
+İçerik Üretimi: Kullanıcılar kendi gezi yazılarını ve kapak görsellerini sisteme yükleyebilirler.
+Etkileşim: Mekanlara puan verme ve yorum yapma özelliği.
+Gelişmiş Arama: Ana sayfadan şehir veya mekan adı ile arama yapabilme.
 
 🛡️ Yönetici Paneli (Back-End)
-Dashboard: Site genel durum özeti.
+Genel Bakış (Dashboard): Toplam şehir, mekan ve üye sayısı gibi istatistiklerin anlık takibi.
+Şehir Yönetimi: Admin panelinden yeni rota (şehir/mekan) ekleme, düzenleme ve silme.
+İçerik Onay Mekanizması: Kullanıcıların gönderdiği blog yazıları admin onayından geçtikten sonra yayınlanır.
+Loglama (Hareket Kaydı): Yöneticilerin ve üyelerin site üzerindeki işlemleri veritabanında kayıt altına alınır.
 
-İçerik Yönetimi: Blog yazılarını onaylama, reddetme veya silme.
 
-Şehir Yönetimi: Yeni şehir ekleme, düzenleme ve silme işlemleri.
+ 🗄️ Veritabanı Mimarisi
 
-Kullanıcı Yönetimi: Üyeleri görüntüleme ve yönetme.
+Proje `MySQL` veritabanı üzerinde ilişkisel bir yapı kullanır. Temel tablolar şunlardır:
 
-Log (Kayıt) Sistemi: Yöneticilerin ve kullanıcıların site üzerindeki hareketlerini (Giriş, Çıkış, Ekleme vb.) tarih ve detaylarıyla kaydeden güvenlik günlüğü.
+| Tablo Adı | Açıklama |
+| :--- | :--- |
+| `kullanicilar` | Üye ve Admin hesap bilgileri (Rol tabanlı). |
+| `blog` | Blog yazıları, yazar ID'si ve `onay_durumu` sütunu. |
+| `sehirler` | Şehirlerin genel bilgileri, plaka kodu ve resim yolları. |
+| `sehir_detaylari` | Bir şehre ait gezilecek yerler, restoranlar vb. |
+| `logs` | Sistemdeki tüm işlemlerin kaydedildiği güvenlik tablosu. |
+| `yorumlar` | Kullanıcı yorumları ve puanları. |
 
-🛠️ Kullanılan Teknolojiler
-Dil: PHP (Native/Procedural)
 
-Veritabanı: MySQL / MariaDB
 
-Arayüz: HTML5, CSS3
 
-Sunucu: Apache (XAMPP/WAMP önerilir)
-
-🗄️ Veritabanı Yapısı
-Proje gezi_rehberi_db adında bir veritabanı kullanır ve aşağıdaki tablolardan oluşur:
-
-kullanicilar: Yönetici ve üyelerin hesap bilgileri.
-
-blog: Gezi yazıları, yazar ID'si ve onay durumları (onay_bekliyor, onaylandi).
-
-sehirler: Şehirlerin genel bilgileri ve kapak fotoğrafları.
-
-sehir_detaylari: Şehirlere ait alt detaylar (Müzeler, parklar vb.).
-
-yorumlar: Kullanıcı yorumları ve puanlamalar.
-
-logs: Sistemdeki işlemlerin (Login, Logout, Insert vb.) kayıtları.
-
-⚙️ Kurulum Adımları
-Projenin yerel sunucuda (Localhost) çalıştırılması için:
-
-Dosyaları Yükleyin: Proje dosyalarını C:/xampp/htdocs/gezi-rehberi (veya kullandığınız sunucunun kök dizinine) klasörüne kopyalayın.
-
-Veritabanını Oluşturun:
-
-phpMyAdmin'e gidin (http://localhost/phpmyadmin).
-
-gezi_rehberi_db adında yeni bir veritabanı oluşturun.
-
-Proje klasöründeki gezi_rehberi_db.sql dosyasını içe aktarın (Import edin).
-
-Veritabanı Bağlantısı:
-
-includes/db.php (veya baglanti.php) dosyasını açın.
-
-Kullanıcı adı (root) ve şifre alanlarını kendi sunucu ayarlarınıza göre düzenleyin.
-
-Çalıştırın: Tarayıcınızdan http://localhost/gezi-rehberi adresine gidin.
-
-🔑 Varsayılan Giriş Bilgileri (Örnek)
-Admin Kullanıcı Adı: admin
-
-Şifre: 123456 (Veya veritabanında belirlediğiniz şifre)
+*Bu proje [Yozgat Bozok Üniversitesi] - [Proje Ödevi] olarak hazırlanmıştır.
