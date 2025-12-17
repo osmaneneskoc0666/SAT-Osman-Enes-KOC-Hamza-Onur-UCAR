@@ -1,4 +1,4 @@
-🌍 Gezi Rehberi - Web Tabanlı Seyahat ve Blog Platformu
+<img width="1901" height="921" alt="image_0 png" src="https://github.com/user-attachments/assets/d205c92b-f1b6-4b22-983d-4eab5d226e3c" />🌍 Gezi Rehberi - Web Tabanlı Seyahat ve Blog Platformu
 
 ![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
@@ -13,19 +13,19 @@
 Projenin karşılama ekranı ve kullanıcıların etkileşime girdiği sayfalar.
 
 <div align="center">
-  <img src="image_2.png.jpg" alt="Gezi Rehberi Ana Sayfa" width="90%" style="margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;">
-  
+  ![image_2 png](https://github.com/user-attachments/assets/f824e6f7-040e-46e0-914c-4d97b218ead0 )
   <br>
 
-  <img src="image_0.png" alt="Ankara Şehir Detay Sayfası" width="45%" style="margin-right: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;">
-  <img src="image_1.png" alt="Blog Yazısı Gönder Formu" width="45%" style="margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px;">
-</div>
+  <img width="1901" height="921" alt="image_0 png" src="https://github.com/user-attachments/assets/fc936338-4148-447b-aca9-bbcbb05c8028" />
+
+<img width="1902" height="920" alt="image_1 png" src="https://github.com/user-attachments/assets/8717c927-9fff-4a3e-a85b-ac5f7281e975" />
+
 
 ⚙️ Yönetici (Admin) Paneli
 Site içeriğinin, şehirlerin ve kullanıcıların yönetildiği kontrol merkezi.
 
 <div align="center">
-  <img src="image_3.png" alt="Admin Paneli Dashboard ve Veri Girişi" width="90%" style="border: 1px solid #ddd; border-radius: 5px;">
+  <img width="1902" height="925" alt="image_3 png" src="https://github.com/user-attachments/assets/1459b617-737e-4348-93b4-75c16fecbac2" />
 </div>
 
 
