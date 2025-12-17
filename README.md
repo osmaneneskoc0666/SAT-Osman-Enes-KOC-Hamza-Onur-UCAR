@@ -5,15 +5,13 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-> Bu proje, üniversite bitirme ödevi kapsamında geliştirilmiş dinamik bir seyahat ve blog yönetim sistemidir.
-
 📷 Projeden Görüntüler
 
 🏠 Ana Sayfa ve Kullanıcı Arayüzü
 Projenin karşılama ekranı ve kullanıcıların etkileşime girdiği sayfalar.
 
 <div align="center">
-  <img width="1901" height="921" alt="image_2 png.jpg" src="https://github.com/user-attachments/assets/fc936338-4148-447b-aca9-bbcbb05c8028" />
+  <img width="1901" height="921" alt="image_2.png.jpg" src="https://github.com/user-attachments/assets/fc936338-4148-447b-aca9-bbcbb05c8028" />
 
   <br>
 
